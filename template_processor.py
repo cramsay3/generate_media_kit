@@ -152,7 +152,7 @@ class TemplateProcessor:
         }
     
     def _markdown_to_html(self, markdown_text: str) -> str:
-        """Convert markdown to HTML for email rendering - simplified version."""
+        """Convert markdown to HTML for email rendering - Gmail-compatible with tables."""
         lines = markdown_text.split('\n')
         html_lines = []
         in_list = False
@@ -168,15 +168,15 @@ class TemplateProcessor:
                 html_lines.append('')
                 continue
             
-            # Headers - use inline styles for Gmail compatibility
+            # Headers - use divs with strong tags and explicit styling (Gmail-friendly)
             if stripped.startswith('## '):
                 if in_list:
                     html_lines.append('</ul>')
                     in_list = False
                 header_text = stripped[3:].strip()
                 # Convert any markdown in header
-                header_text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', header_text)
-                html_lines.append(f'<h2 style="font-size: 20px; font-weight: bold; color: #333333; margin-top: 20px; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 2px solid #3498db;">{header_text}</h2>')
+                header_text = re.sub(r'\*\*(.+?)\*\*', r'<strong style="font-weight: bold;">\1</strong>', header_text)
+                html_lines.append(f'<div style="font-size: 20px; font-weight: bold; color: #2c3e50; margin-top: 25px; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #3498db; font-family: Arial, Helvetica, sans-serif;"><strong style="font-weight: bold; font-size: 20px; color: #2c3e50;">{header_text}</strong></div>')
                 continue
             
             if stripped.startswith('### '):
@@ -185,20 +185,20 @@ class TemplateProcessor:
                     in_list = False
                 header_text = stripped[4:].strip()
                 # Convert any markdown in header
-                header_text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', header_text)
-                html_lines.append(f'<h3 style="font-size: 18px; font-weight: bold; color: #444444; margin-top: 15px; margin-bottom: 8px;">{header_text}</h3>')
+                header_text = re.sub(r'\*\*(.+?)\*\*', r'<strong style="font-weight: bold;">\1</strong>', header_text)
+                html_lines.append(f'<div style="font-size: 18px; font-weight: bold; color: #34495e; margin-top: 18px; margin-bottom: 10px; font-family: Arial, Helvetica, sans-serif;"><strong style="font-weight: bold; font-size: 18px; color: #34495e;">{header_text}</strong></div>')
                 continue
             
             # List items
             if stripped.startswith('- '):
                 if not in_list:
-                    html_lines.append('<ul>')
+                    html_lines.append('<ul style="margin: 10px 0; padding-left: 25px;">')
                     in_list = True
                 item_text = stripped[2:].strip()
                 # Convert bold and links in list items with inline styles
-                item_text = re.sub(r'\*\*(.+?)\*\*', r'<strong style="font-weight: bold; color: #333333;">\1</strong>', item_text)
-                item_text = re.sub(r'(https?://[^\s]+)', r'<a href="\1" style="color: #3498db; text-decoration: none;">\1</a>', item_text)
-                html_lines.append(f'<li style="margin: 5px 0; line-height: 1.5;">{item_text}</li>')
+                item_text = re.sub(r'\*\*(.+?)\*\*', r'<strong style="font-weight: bold; color: #333333; font-family: Arial, Helvetica, sans-serif;">\1</strong>', item_text)
+                item_text = re.sub(r'(https?://[^\s]+)', r'<a href="\1" style="color: #3498db; text-decoration: underline;">\1</a>', item_text)
+                html_lines.append(f'<li style="margin: 6px 0; line-height: 1.6; font-family: Arial, Helvetica, sans-serif;">{item_text}</li>')
                 continue
             
             # Close list if needed
@@ -213,31 +213,43 @@ class TemplateProcessor:
             # Regular paragraph - convert markdown to HTML
             para_text = stripped
             
-            # Convert bold **text** to <strong> with inline style (Gmail compatible)
-            para_text = re.sub(r'\*\*(.+?)\*\*', r'<strong style="font-weight: bold; color: #333333;">\1</strong>', para_text)
+            # Convert bold **text** to <strong> with explicit bold styling
+            para_text = re.sub(r'\*\*(.+?)\*\*', r'<strong style="font-weight: bold; color: #2c3e50; font-family: Arial, Helvetica, sans-serif;">\1</strong>', para_text)
             
             # Convert URLs to links with inline styles
-            para_text = re.sub(r'(https?://[^\s<>"{}|\\^`\[\]]+)', r'<a href="\1" style="color: #3498db; text-decoration: none;">\1</a>', para_text)
+            para_text = re.sub(r'(https?://[^\s<>"{}|\\^`\[\]]+)', r'<a href="\1" style="color: #3498db; text-decoration: underline;">\1</a>', para_text)
             
             # Convert markdown links [text](url) with inline styles
-            para_text = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2" style="color: #3498db; text-decoration: none;">\1</a>', para_text)
+            para_text = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2" style="color: #3498db; text-decoration: underline;">\1</a>', para_text)
             
-            html_lines.append(f'<p style="margin: 10px 0; line-height: 1.6;">{para_text}</p>')
+            html_lines.append(f'<p style="margin: 12px 0; line-height: 1.7; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #333333;">{para_text}</p>')
         
         if in_list:
             html_lines.append('</ul>')
         
         html_content = '\n'.join(html_lines)
         
-        # HTML wrapper with inline styles for Gmail compatibility
+        # HTML wrapper with table-based layout for maximum Gmail compatibility
         html_body = f"""<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 1.6; color: #333333; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff;">
+<body style="margin: 0; padding: 0; background-color: #f4f4f4;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #f4f4f4;">
+<tr>
+<td align="center" style="padding: 20px;">
+<table width="600" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; border-radius: 4px;">
+<tr>
+<td style="padding: 30px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 1.7; color: #333333;">
 {html_content}
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
 </body>
 </html>"""
         
