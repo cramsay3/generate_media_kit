@@ -131,10 +131,18 @@ class TemplateProcessor:
         
         # Create proper plain text version (no markdown) from the processed body
         plain_text_lines = []
+        prev_was_empty = False
         for line in body.split('\n'):
             stripped = line.strip()
-            if not stripped or stripped.startswith('---'):
+            if not stripped:
+                # Add spacing between sections
+                if not prev_was_empty and plain_text_lines:
+                    plain_text_lines.append('')
+                prev_was_empty = True
                 continue
+            if stripped.startswith('---'):
+                continue
+            prev_was_empty = False
             # Remove markdown formatting
             plain = re.sub(r'\*\*(.+?)\*\*', r'\1', stripped)  # Remove bold
             plain = re.sub(r'##+\s*', '', plain)  # Remove headers
@@ -160,12 +168,11 @@ class TemplateProcessor:
         for line in lines:
             stripped = line.strip()
             
-            # Skip empty lines
+            # Skip empty lines (spacing handled by paragraph margins)
             if not stripped:
                 if in_list:
                     html_lines.append('</ul>')
                     in_list = False
-                html_lines.append('')
                 continue
             
             # Headers - use divs with strong tags and explicit styling (Gmail-friendly)
@@ -176,7 +183,7 @@ class TemplateProcessor:
                 header_text = stripped[3:].strip()
                 # Convert any markdown in header
                 header_text = re.sub(r'\*\*(.+?)\*\*', r'<strong style="font-weight: bold;">\1</strong>', header_text)
-                html_lines.append(f'<div style="font-size: 20px; font-weight: bold; color: #2c3e50; margin-top: 25px; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #3498db; font-family: Arial, Helvetica, sans-serif;"><strong style="font-weight: bold; font-size: 20px; color: #2c3e50;">{header_text}</strong></div>')
+                html_lines.append(f'<div style="font-size: 20px; font-weight: bold; color: #2c3e50; margin-top: 25px; margin-bottom: 12px; padding-bottom: 8px; font-family: Arial, Helvetica, sans-serif;"><strong style="font-weight: bold; font-size: 20px; color: #2c3e50;">{header_text}</strong></div>')
                 continue
             
             if stripped.startswith('### '):
@@ -197,7 +204,7 @@ class TemplateProcessor:
                 item_text = stripped[2:].strip()
                 # Convert bold and links in list items with inline styles
                 item_text = re.sub(r'\*\*(.+?)\*\*', r'<strong style="font-weight: bold; color: #333333; font-family: Arial, Helvetica, sans-serif;">\1</strong>', item_text)
-                item_text = re.sub(r'(https?://[^\s]+)', r'<a href="\1" style="color: #3498db; text-decoration: underline;">\1</a>', item_text)
+                item_text = re.sub(r'(https?://[^\s]+)', r'<a href="\1" style="color: #3498db; text-decoration: none;">\1</a>', item_text)
                 html_lines.append(f'<li style="margin: 6px 0; line-height: 1.6; font-family: Arial, Helvetica, sans-serif;">{item_text}</li>')
                 continue
             
@@ -213,14 +220,15 @@ class TemplateProcessor:
             # Regular paragraph - convert markdown to HTML
             para_text = stripped
             
+            # Handle bold labels followed by colons (like "**Label:** value") - keep on same line
             # Convert bold **text** to <strong> with explicit bold styling
             para_text = re.sub(r'\*\*(.+?)\*\*', r'<strong style="font-weight: bold; color: #2c3e50; font-family: Arial, Helvetica, sans-serif;">\1</strong>', para_text)
             
             # Convert URLs to links with inline styles
-            para_text = re.sub(r'(https?://[^\s<>"{}|\\^`\[\]]+)', r'<a href="\1" style="color: #3498db; text-decoration: underline;">\1</a>', para_text)
+            para_text = re.sub(r'(https?://[^\s<>"{}|\\^`\[\]]+)', r'<a href="\1" style="color: #3498db; text-decoration: none;">\1</a>', para_text)
             
             # Convert markdown links [text](url) with inline styles
-            para_text = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2" style="color: #3498db; text-decoration: underline;">\1</a>', para_text)
+            para_text = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2" style="color: #3498db; text-decoration: none;">\1</a>', para_text)
             
             html_lines.append(f'<p style="margin: 12px 0; line-height: 1.7; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #333333;">{para_text}</p>')
         

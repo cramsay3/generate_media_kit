@@ -45,7 +45,7 @@ I released this as a single last week. I wrote this track near the river banks o
 - Instagram: <<artist_instagram>>
 - Website: <<artist_website>>
 
-Thank you for your time and consideration. I'd love to hear your thoughts!
+If you are open to it, I'd appreciate you placing in your playlist! THANK YOU!
 
 Best regards,
 

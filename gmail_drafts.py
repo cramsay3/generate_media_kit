@@ -18,7 +18,7 @@ from googleapiclient.errors import HttpError
 class GmailDraftCreator:
     """Create Gmail drafts using the Gmail API."""
     
-    SCOPES = ['https://www.googleapis.com/auth/gmail.compose']
+    SCOPES = ['https://www.googleapis.com/auth/gmail.compose', 'https://www.googleapis.com/auth/gmail.send']
     
     def __init__(self, credentials_file: str = 'credentials.json', token_file: str = 'token.json'):
         self.credentials_file = credentials_file
@@ -180,6 +180,74 @@ class GmailDraftCreator:
                 })
         
         return results
+    
+    def send_email(self, to_email: str, subject: str, body: str, 
+                   from_email: Optional[str] = None) -> Optional[str]:
+        """
+        Send an email directly (not a draft).
+        
+        Args:
+            to_email: Recipient email address
+            subject: Email subject
+            body: Email body (HTML or plain text)
+            from_email: Sender email (optional, uses authenticated account if not provided)
+        
+        Returns:
+            Message ID if successful, None otherwise
+        """
+        if not self.service:
+            self.authenticate()
+        
+        try:
+            # Create message
+            message = MIMEMultipart('alternative')
+            message['to'] = to_email
+            message['subject'] = subject
+            if from_email:
+                message['from'] = from_email
+            
+            # Detect if body is HTML - check for DOCTYPE, html tags, or common HTML elements
+            is_html = ('<!DOCTYPE' in body.upper() or 
+                      '<html>' in body.lower() or 
+                      '<body>' in body.lower() or 
+                      '<p>' in body.lower() or 
+                      '<strong>' in body.lower() or 
+                      '<a href' in body.lower() or
+                      '<div' in body.lower())
+            
+            if is_html:
+                # Force HTML-only email - don't include plain text fallback
+                # This ensures Gmail always displays HTML
+                msg_html = MIMEText(body, 'html', 'utf-8')
+                msg_html.set_charset('utf-8')
+                # Remove any existing Content-Type and set explicitly
+                if 'Content-Type' in msg_html:
+                    del msg_html['Content-Type']
+                msg_html.add_header('Content-Type', 'text/html; charset=utf-8')
+                msg_html.add_header('Content-Transfer-Encoding', 'quoted-printable')
+                
+                # Attach HTML ONLY - no plain text fallback to force HTML rendering
+                message.attach(msg_html)
+            else:
+                # Plain text only
+                msg_text = MIMEText(body, 'plain', 'utf-8')
+                msg_text.add_header('Content-Type', 'text/plain; charset=utf-8')
+                message.attach(msg_text)
+            
+            # Encode message
+            raw_message = base64.urlsafe_b64encode(message.as_bytes()).decode('utf-8')
+            
+            # Send email
+            sent_message = self.service.users().messages().send(
+                userId='me',
+                body={'raw': raw_message}
+            ).execute()
+            
+            return sent_message.get('id')
+        
+        except HttpError as error:
+            print(f"An error occurred sending email: {error}")
+            return None
 
 
 if __name__ == '__main__':
