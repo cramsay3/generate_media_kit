@@ -92,30 +92,29 @@ class GmailDraftCreator:
                 # IMPORTANT: HTML part must come FIRST in multipart/alternative
                 # Gmail prefers HTML as the primary content type
                 
-                # Create plain text version first (will be attached second)
-                try:
-                    import html2text
-                    h = html2text.HTML2Text()
-                    h.ignore_links = False
-                    h.body_width = 0
-                    plain_body = h.handle(body)
-                except ImportError:
-                    import re
-                    plain_body = re.sub(r'<[^>]+>', '', body)
-                    plain_body = re.sub(r'\s+', ' ', plain_body).strip()
-                
-                # Create HTML part with explicit headers
+                # Create HTML part with explicit headers - attach FIRST
                 msg_html = MIMEText(body, 'html', 'utf-8')
                 msg_html.set_charset('utf-8')
-                msg_html.replace_header('Content-Type', 'text/html; charset=utf-8') if 'Content-Type' in msg_html else msg_html.add_header('Content-Type', 'text/html; charset=utf-8')
+                # Remove any existing Content-Type and set explicitly
+                if 'Content-Type' in msg_html:
+                    del msg_html['Content-Type']
+                msg_html.add_header('Content-Type', 'text/html; charset=utf-8')
+                msg_html.add_header('Content-Transfer-Encoding', 'quoted-printable')
                 
-                # Create plain text part
+                # Create minimal plain text version (Gmail fallback)
+                # Strip HTML tags but keep it minimal so Gmail prefers HTML
+                import re
+                plain_body = re.sub(r'<[^>]+>', '', body)
+                plain_body = re.sub(r'\s+', ' ', plain_body).strip()
+                plain_body = re.sub(r'\*\*', '', plain_body)  # Remove any remaining markdown
+                
                 msg_plain = MIMEText(plain_body, 'plain', 'utf-8')
                 msg_plain.set_charset('utf-8')
+                msg_plain.add_header('Content-Type', 'text/plain; charset=utf-8')
                 
                 # Attach HTML FIRST (Gmail will use this as primary)
                 message.attach(msg_html)
-                # Then attach plain text as fallback
+                # Then attach plain text as fallback (minimal)
                 message.attach(msg_plain)
             else:
                 # Plain text only
