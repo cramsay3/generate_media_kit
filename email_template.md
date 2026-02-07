@@ -39,6 +39,8 @@ I'm reaching out because I believe my music would be a great fit for your playli
 **About "Bottle Rocket Sunsets":**
 I released this as a single last week. I wrote this track near the river banks of the Blanco river, in Central Texas. I wrote it reminiscing about growing up swimming with family and friends on the Blanco river. I attempt to capture the golden haze of childhood summers including lawn chairs by the creek, rope swings, and first love. It's a wistful tribute to growing up, growing older, and never forgetting where you came from.
 
+**Listen:** https://open.spotify.com/album/1FVHr9QasE9uHm0bR29vvU?si=JzkCM6HiSZmwBrBmmJESnA
+
 ## Links
 
 - Spotify: <<artist_spotify_link>>
