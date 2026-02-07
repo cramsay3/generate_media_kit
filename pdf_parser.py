@@ -79,6 +79,59 @@ class PDFParser:
                 if 'genres' in pending_data:
                     current_contact.genres = pending_data['genres']
                 
+                # Now look backwards from email to find Spotify URL, then curator, then playlist
+                # Structure: Playlist -> Curator -> Spotify URL -> Genres -> Followers -> Email
+                spotify_idx = None
+                for j in range(max(0, i-20), i):
+                    if 'spotify.com' in lines[j].lower():
+                        spotify_idx = j
+                        break
+                
+                if spotify_idx is not None:
+                    # Found Spotify URL, look backwards for curator (skip empty lines)
+                    # Structure: Playlist -> Curator -> [empty] -> Spotify URL
+                    genre_indicators = ['ROCK', 'POP', 'HIP', 'HOP', 'EDM', 'INDIE', 'ELECTRONIC', 
+                                       'FOLK', 'SOUL', 'R&B', 'JAZZ', 'BLUES', 'PUNK', 'METAL']
+                    
+                    # Find curator (first non-empty line before Spotify)
+                    for j in range(spotify_idx - 1, max(0, spotify_idx - 10), -1):
+                        curator_candidate = lines[j]
+                        if not curator_candidate:  # Skip empty lines
+                            continue
+                        
+                        # Check if it looks like a curator name
+                        if (len(curator_candidate) < 80 and 
+                            '@' not in curator_candidate and 
+                            'spotify' not in curator_candidate.lower() and
+                            not curator_candidate.startswith('http') and
+                            not re.match(r'^\d+[,\d]*\s*$', curator_candidate.replace(',', '').replace(' ', '')) and
+                            curator_candidate not in ['Playlist Name', 'Curator', 'Genres', 'Followers', 'Best Way To Contact']):
+                            
+                            # Check if it's not genres
+                            is_genre = any(indicator in curator_candidate.upper() for indicator in genre_indicators) and (',' in curator_candidate or len(curator_candidate) > 30)
+                            
+                            if not is_genre:
+                                current_contact.curator = curator_candidate
+                                
+                                # Now find playlist name (before curator)
+                                for k in range(j - 1, max(0, j - 5), -1):
+                                    playlist_candidate = lines[k]
+                                    if not playlist_candidate:  # Skip empty lines
+                                        continue
+                                    
+                                    if (len(playlist_candidate) < 100 and 
+                                        '@' not in playlist_candidate and 
+                                        'spotify' not in playlist_candidate.lower() and
+                                        not playlist_candidate.startswith('http') and
+                                        not re.match(r'^\d+[,\d]*\s*$', playlist_candidate.replace(',', '').replace(' ', '')) and
+                                        playlist_candidate not in ['Playlist Name', 'Curator', 'Genres', 'Followers', 'Best Way To Contact']):
+                                        
+                                        is_genre = any(indicator in playlist_candidate.upper() for indicator in genre_indicators) and (',' in playlist_candidate or len(playlist_candidate) > 30)
+                                        if not is_genre:
+                                            current_contact.playlist_name = playlist_candidate
+                                            break
+                                break
+                
                 pending_data = {}
                 
                 # Remove email from line to get remaining text (might be genres)
@@ -151,42 +204,57 @@ class PDFParser:
                         else:
                             pending_data['genres'] = line
                 
-                # Look backwards for playlist name (before Spotify URL)
-                elif not current_contact.playlist_name and i > 0:
-                    # Check previous lines for playlist name
-                    for j in range(max(0, i-10), i):
-                        prev_line = lines[j]
-                        if (prev_line and 
-                            len(prev_line) < 100 and 
-                            '@' not in prev_line and 
-                            'spotify' not in prev_line.lower() and
-                            not prev_line.startswith('http') and
-                            not re.match(r'^\d+[,\d]*\s*$', prev_line.replace(',', '').replace(' ', '')) and
-                            prev_line not in ['Playlist Name', 'Curator', 'Genres']):
-                            
-                            # Check if next line after this is Spotify URL
-                            if j + 1 < len(lines) and 'spotify' in lines[j+1].lower():
+                # Look backwards for playlist name and curator (before Spotify URL)
+                # Structure: Playlist Name -> Curator -> Spotify URL -> Genres -> Followers -> Email
+                if i > 0:
+                    # Look backwards from current position to find Spotify URL, then curator, then playlist
+                    spotify_idx = None
+                    for j in range(max(0, i-15), i):
+                        if 'spotify.com' in lines[j].lower():
+                            spotify_idx = j
+                            break
+                    
+                    if spotify_idx is not None:
+                        # Found Spotify URL, look backwards for curator and playlist name
+                        # Curator is usually right before Spotify URL
+                        if spotify_idx > 0:
+                            prev_line = lines[spotify_idx - 1]
+                            # Check if it looks like a curator name (not genres, not numbers, not URL)
+                            if (prev_line and 
+                                len(prev_line) < 80 and 
+                                '@' not in prev_line and 
+                                'spotify' not in prev_line.lower() and
+                                not prev_line.startswith('http') and
+                                not re.match(r'^\d+[,\d]*\s*$', prev_line.replace(',', '').replace(' ', '')) and
+                                not any(indicator in prev_line.upper() for indicator in genre_indicators) and
+                                prev_line not in ['Playlist Name', 'Curator', 'Genres', 'Followers', 'Best Way To Contact']):
+                                
+                                # This is likely the curator
                                 if current_contact.email:
-                                    current_contact.playlist_name = prev_line
+                                    if not current_contact.curator:
+                                        current_contact.curator = prev_line
                                 else:
-                                    pending_data['playlist_name'] = prev_line
-                                break
-                
-                # Look for curator (usually a name, not genres, between playlist and Spotify)
-                elif (current_contact.playlist_name or 'playlist_name' in pending_data) and not current_contact.curator:
-                    if (len(line) < 80 and 
-                        '@' not in line and 
-                        'spotify' not in line.lower() and
-                        not line.startswith('http') and
-                        not re.match(r'^\d+[,\d]*\s*$', line.replace(',', '').replace(' ', '')) and
-                        not any(indicator in line.upper() for indicator in genre_indicators)):
-                        
-                        # Check if next line is Spotify URL
-                        if i + 1 < len(lines) and 'spotify' in lines[i+1].lower():
-                            if current_contact.email:
-                                current_contact.curator = line
-                            else:
-                                pending_data['curator'] = line
+                                    if 'curator' not in pending_data:
+                                        pending_data['curator'] = prev_line
+                            
+                            # Playlist name is usually before curator
+                            if spotify_idx > 1:
+                                playlist_line = lines[spotify_idx - 2]
+                                if (playlist_line and 
+                                    len(playlist_line) < 100 and 
+                                    '@' not in playlist_line and 
+                                    'spotify' not in playlist_line.lower() and
+                                    not playlist_line.startswith('http') and
+                                    not re.match(r'^\d+[,\d]*\s*$', playlist_line.replace(',', '').replace(' ', '')) and
+                                    not any(indicator in playlist_line.upper() for indicator in genre_indicators) and
+                                    playlist_line not in ['Playlist Name', 'Curator', 'Genres', 'Followers', 'Best Way To Contact']):
+                                    
+                                    if current_contact.email:
+                                        if not current_contact.playlist_name:
+                                            current_contact.playlist_name = playlist_line
+                                    else:
+                                        if 'playlist_name' not in pending_data:
+                                            pending_data['playlist_name'] = playlist_line
             
             i += 1
         
