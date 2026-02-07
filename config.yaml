@@ -1,0 +1,19 @@
+# Email Draft Creator Configuration
+# Store your default values here - they'll be used unless overridden via command line
+
+artist:
+  name: "Charley Ramsay"
+  spotify_link: "https://open.spotify.com/artist/charleyramsay"
+  instagram: "@charleyramsay"
+  website: "https://charleyramsay.com"
+
+email:
+  custom_message: "I'm reaching out because I just released my latest single 'Bottle Rocket Sunsets' last week and I think it would be a perfect fit for your playlist."
+  additional_info: "My latest single 'Bottle Rocket Sunsets' was released last week and captures that nostalgic summer vibe that I think would resonate with your listeners."
+  custom_subject: null  # null = auto-generate from playlist name
+
+files:
+  template: "email_template.md"
+  pdf_text: "playlist_contacts.txt"
+  credentials: "credentials.json"
+  token: "token.json"
