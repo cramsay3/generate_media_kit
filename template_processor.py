@@ -79,7 +79,7 @@ class TemplateProcessor:
             'artist_name': artist_name or '[Your Name]',
             'additional_info': additional_info or '',
             'artist_spotify_link': artist_spotify_link or '[Your Spotify Link]',
-            'artist_instagram': artist_instagram or '[Your Instagram]',
+            'artist_instagram': f"@{artist_instagram}" if artist_instagram and not artist_instagram.startswith('@') else (artist_instagram or '[Your Instagram]'),
             'artist_website': artist_website or '[Your Website]',
         }
         
@@ -136,87 +136,87 @@ class TemplateProcessor:
         }
     
     def _markdown_to_html(self, markdown_text: str) -> str:
-        """Convert markdown to HTML for email rendering."""
-        html = markdown_text
-        
-        # Convert headers
-        html = re.sub(r'^## (.+)$', r'<h2>\1</h2>', html, flags=re.MULTILINE)
-        html = re.sub(r'^### (.+)$', r'<h3>\1</h3>', html, flags=re.MULTILINE)
-        
-        # Convert bold **text** to <strong>text</strong>
-        html = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', html)
-        
-        # Convert links [text](url) to <a href="url">text</a>
-        html = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2">\1</a>', html)
-        
-        # Convert URLs to links (if not already linked)
-        url_pattern = r'(https?://[^\s<>"{}|\\^`\[\]]+)'
-        html = re.sub(url_pattern, r'<a href="\1">\1</a>', html)
-        
-        # Convert bullet points - item to <li>item</li>
-        lines = html.split('\n')
+        """Convert markdown to HTML for email rendering - simplified version."""
+        lines = markdown_text.split('\n')
         html_lines = []
         in_list = False
         
         for line in lines:
             stripped = line.strip()
             
-            # Handle list items
+            # Skip empty lines
+            if not stripped:
+                if in_list:
+                    html_lines.append('</ul>')
+                    in_list = False
+                html_lines.append('')
+                continue
+            
+            # Headers
+            if stripped.startswith('## '):
+                if in_list:
+                    html_lines.append('</ul>')
+                    in_list = False
+                html_lines.append(f'<h2>{stripped[3:]}</h2>')
+                continue
+            
+            if stripped.startswith('### '):
+                if in_list:
+                    html_lines.append('</ul>')
+                    in_list = False
+                html_lines.append(f'<h3>{stripped[4:]}</h3>')
+                continue
+            
+            # List items
             if stripped.startswith('- '):
                 if not in_list:
                     html_lines.append('<ul>')
                     in_list = True
                 item_text = stripped[2:].strip()
+                # Convert bold and links in list items
+                item_text = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', item_text)
+                item_text = re.sub(r'(https?://[^\s]+)', r'<a href="\1">\1</a>', item_text)
                 html_lines.append(f'<li>{item_text}</li>')
-            else:
-                if in_list:
-                    html_lines.append('</ul>')
-                    in_list = False
-                
-                if stripped:
-                    # Wrap in paragraph if not already a tag
-                    if not stripped.startswith('<') and not stripped.startswith('---'):
-                        html_lines.append(f'<p>{stripped}</p>')
-                    elif stripped.startswith('---'):
-                        html_lines.append('<hr>')
-                    else:
-                        html_lines.append(line)
-                else:
-                    html_lines.append('')
+                continue
+            
+            # Close list if needed
+            if in_list:
+                html_lines.append('</ul>')
+                in_list = False
+            
+            # Skip separator lines
+            if stripped.startswith('---'):
+                continue
+            
+            # Regular paragraph - convert markdown to HTML
+            para_text = stripped
+            
+            # Convert bold **text** to <b>text</b>
+            para_text = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', para_text)
+            
+            # Convert URLs to links
+            para_text = re.sub(r'(https?://[^\s<>"{}|\\^`\[\]]+)', r'<a href="\1">\1</a>', para_text)
+            
+            # Convert markdown links [text](url)
+            para_text = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2">\1</a>', para_text)
+            
+            html_lines.append(f'<p>{para_text}</p>')
         
         if in_list:
             html_lines.append('</ul>')
         
-        html = '\n'.join(html_lines)
+        html_content = '\n'.join(html_lines)
         
-        # Wrap in HTML structure - use inline styles for better Gmail compatibility
-        # Gmail often strips <style> tags, so we use inline styles instead
-        html_body = f"""<html>
+        # Simple HTML wrapper - Gmail compatible
+        html_body = f"""<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 </head>
-<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff;">
-{html}
+<body>
+{html_content}
 </body>
 </html>"""
-        
-        # Replace <strong> with <b> and add inline styles for better Gmail support
-        html_body = html_body.replace('<strong>', '<b style="color: #2c3e50; font-weight: bold;">')
-        html_body = html_body.replace('</strong>', '</b>')
-        
-        # Ensure links have inline styles
-        html_body = re.sub(r'<a href="([^"]+)">', r'<a href="\1" style="color: #3498db; text-decoration: none;">', html_body)
-        
-        # Style headers
-        html_body = re.sub(r'<h2>', r'<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; margin-top: 20px;">', html_body)
-        html_body = re.sub(r'<h3>', r'<h3 style="color: #34495e; margin-top: 15px;">', html_body)
-        
-        # Style paragraphs
-        html_body = re.sub(r'<p>', r'<p style="margin: 10px 0;">', html_body)
-        
-        # Style lists
-        html_body = re.sub(r'<ul>', r'<ul style="margin: 10px 0; padding-left: 20px;">', html_body)
-        html_body = re.sub(r'<li>', r'<li style="margin: 5px 0;">', html_body)
         
         return html_body
     
