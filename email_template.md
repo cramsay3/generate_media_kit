@@ -12,8 +12,6 @@ Hello <<curator_name>>,
 
 <<custom_message>>
 
-I'm reaching out because I believe my music would be a great fit for your playlist.
-
 ## Playlist Information
 
 **Playlist Name:** <<playlist_name>>
