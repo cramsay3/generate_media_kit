@@ -168,19 +168,25 @@ class TemplateProcessor:
                 html_lines.append('')
                 continue
             
-            # Headers
+            # Headers - use inline styles for Gmail compatibility
             if stripped.startswith('## '):
                 if in_list:
                     html_lines.append('</ul>')
                     in_list = False
-                html_lines.append(f'<h2>{stripped[3:]}</h2>')
+                header_text = stripped[3:].strip()
+                # Convert any markdown in header
+                header_text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', header_text)
+                html_lines.append(f'<h2 style="font-size: 20px; font-weight: bold; color: #333333; margin-top: 20px; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 2px solid #3498db;">{header_text}</h2>')
                 continue
             
             if stripped.startswith('### '):
                 if in_list:
                     html_lines.append('</ul>')
                     in_list = False
-                html_lines.append(f'<h3>{stripped[4:]}</h3>')
+                header_text = stripped[4:].strip()
+                # Convert any markdown in header
+                header_text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', header_text)
+                html_lines.append(f'<h3 style="font-size: 18px; font-weight: bold; color: #444444; margin-top: 15px; margin-bottom: 8px;">{header_text}</h3>')
                 continue
             
             # List items
@@ -189,10 +195,10 @@ class TemplateProcessor:
                     html_lines.append('<ul>')
                     in_list = True
                 item_text = stripped[2:].strip()
-                # Convert bold and links in list items
-                item_text = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', item_text)
-                item_text = re.sub(r'(https?://[^\s]+)', r'<a href="\1">\1</a>', item_text)
-                html_lines.append(f'<li>{item_text}</li>')
+                # Convert bold and links in list items with inline styles
+                item_text = re.sub(r'\*\*(.+?)\*\*', r'<strong style="font-weight: bold; color: #333333;">\1</strong>', item_text)
+                item_text = re.sub(r'(https?://[^\s]+)', r'<a href="\1" style="color: #3498db; text-decoration: none;">\1</a>', item_text)
+                html_lines.append(f'<li style="margin: 5px 0; line-height: 1.5;">{item_text}</li>')
                 continue
             
             # Close list if needed
@@ -207,29 +213,30 @@ class TemplateProcessor:
             # Regular paragraph - convert markdown to HTML
             para_text = stripped
             
-            # Convert bold **text** to <b>text</b>
-            para_text = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', para_text)
+            # Convert bold **text** to <strong> with inline style (Gmail compatible)
+            para_text = re.sub(r'\*\*(.+?)\*\*', r'<strong style="font-weight: bold; color: #333333;">\1</strong>', para_text)
             
-            # Convert URLs to links
-            para_text = re.sub(r'(https?://[^\s<>"{}|\\^`\[\]]+)', r'<a href="\1">\1</a>', para_text)
+            # Convert URLs to links with inline styles
+            para_text = re.sub(r'(https?://[^\s<>"{}|\\^`\[\]]+)', r'<a href="\1" style="color: #3498db; text-decoration: none;">\1</a>', para_text)
             
-            # Convert markdown links [text](url)
-            para_text = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2">\1</a>', para_text)
+            # Convert markdown links [text](url) with inline styles
+            para_text = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2" style="color: #3498db; text-decoration: none;">\1</a>', para_text)
             
-            html_lines.append(f'<p>{para_text}</p>')
+            html_lines.append(f'<p style="margin: 10px 0; line-height: 1.6;">{para_text}</p>')
         
         if in_list:
             html_lines.append('</ul>')
         
         html_content = '\n'.join(html_lines)
         
-        # Simple HTML wrapper - Gmail compatible
+        # HTML wrapper with inline styles for Gmail compatibility
         html_body = f"""<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 1.6; color: #333333; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff;">
 {html_content}
 </body>
 </html>"""
