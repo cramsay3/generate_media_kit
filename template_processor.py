@@ -129,10 +129,26 @@ class TemplateProcessor:
         # Convert markdown to HTML for email
         html_body = self._markdown_to_html(body)
         
+        # Create proper plain text version (no markdown) from the processed body
+        plain_text_lines = []
+        for line in body.split('\n'):
+            stripped = line.strip()
+            if not stripped or stripped.startswith('---'):
+                continue
+            # Remove markdown formatting
+            plain = re.sub(r'\*\*(.+?)\*\*', r'\1', stripped)  # Remove bold
+            plain = re.sub(r'##+\s*', '', plain)  # Remove headers
+            plain = re.sub(r'^-\s+', '', plain)  # Remove list markers
+            plain = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', plain)  # Remove link formatting
+            if plain:
+                plain_text_lines.append(plain)
+        
+        plain_text_body = '\n'.join(plain_text_lines)
+        
         return {
             'subject': replacements['subject'],
             'body': html_body.strip(),
-            'body_plain': body.strip()  # Keep plain text version too
+            'body_plain': plain_text_body.strip()  # Clean plain text version
         }
     
     def _markdown_to_html(self, markdown_text: str) -> str:
