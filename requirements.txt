@@ -7,3 +7,5 @@ pandas
 html2text
 dnspython
 pyyaml
+python-dotenv
+instagrapi

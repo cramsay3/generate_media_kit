@@ -125,8 +125,9 @@ Examples:
     artist_instagram = args.artist_instagram or get_config_value(config, 'artist', 'instagram')
     artist_website = args.artist_website or get_config_value(config, 'artist', 'website')
     
-    custom_message = args.custom_message or get_config_value(config, 'email', 'custom_message')
-    additional_info = args.additional_info or get_config_value(config, 'email', 'additional_info')
+    # custom_message and additional_info should be in template, not config
+    custom_message = args.custom_message  # Only from command line if needed
+    additional_info = args.additional_info  # Only from command line if needed
     custom_subject = args.custom_subject or get_config_value(config, 'email', 'custom_subject')
     
     print("=" * 60)

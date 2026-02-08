@@ -1,3 +1,17 @@
 .env
 token.json
 credentials.json
+instagram_session.json
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+test_email.html
+*.zip

@@ -3,17 +3,75 @@
 
 artist:
   name: "Charley Ramsay"
-  spotify_link: "https://open.spotify.com/artist/charleyramsay"
+  spotify_link: "https://open.spotify.com/artist/2s51Onhpd29JvOji1yuCKy?si=TVLfaQxOSz-qw6UQRraMkA"
   instagram: "cramsay3"
   website: "https://charleyramsay.com"
 
 email:
-  custom_message: "I'm reaching out because I just released my latest single 'Bottle Rocket Sunsets' last week and I think it would be a perfect fit for your playlist."
-  additional_info: "My latest single 'Bottle Rocket Sunsets' was released last week and captures that nostalgic summer vibe that I think would resonate with your listeners."
   custom_subject: null  # null = auto-generate from playlist name
+  # Genre filtering - only include playlists matching these genres
+  genre_keywords:
+    - indie pop
+    - singer/songwriter
+    - rock
+    - folk-pop
+    - acoustic
+    - indie
+    - chillwave
+    - pop
+    - folk
+    - alternative
+    - country
+  # Exclude these genres (even if they match keywords above)
+  exclude_genres:
+    - hip hop
+    - rap
+    - edm
+    - electronic
+    - house
+    - techno
+    - trance
+    - dubstep
+    - brostep
+    - metal
+    - punk
+    - hardcore
+    - reggae
+    - reggaeton
+    - trap
+  # Email validation settings
+  validate_emails: true  # Only use validated emails
+  validation_csv: null  # Path to CSV with validated emails (optional)
 
 files:
   template: "email_template.md"
   pdf_text: "playlist_contacts.txt"
   credentials: "credentials.json"
   token: "token.json"
+
+# Email sending settings
+email_settings:
+  cc_email: "charley@ramsays.us"  # CC this email on all sent emails
+
+# Campaign throttling settings (can be overridden in send_campaign.py)
+campaign:
+  min_delay_seconds: 30      # Minimum delay between emails
+  max_delay_seconds: 90      # Maximum delay (randomized)
+  max_per_hour: 50           # Maximum emails per hour
+  max_per_day: 200           # Maximum emails per day
+
+# Instagram following settings (for follow_instagram.py)
+instagram:
+  min_delay_seconds: 60      # Minimum delay between follows (Instagram is stricter)
+  max_delay_seconds: 180     # Maximum delay (randomized)
+  max_per_hour: 20           # Maximum follows per hour (Instagram limit ~20-30/hour)
+  max_per_day: 100           # Maximum follows per day (Instagram limit ~100-150/day)
+
+# Instagram engagement settings (for engage_instagram.py)
+instagram_engagement:
+  min_delay_seconds: 30      # Minimum delay between actions
+  max_delay_seconds: 90      # Maximum delay (randomized)
+  max_likes_per_hour: 30     # Maximum likes per hour (be conservative!)
+  max_comments_per_hour: 10  # Maximum comments per hour (very conservative!)
+  max_likes_per_day: 150     # Maximum likes per day
+  max_comments_per_day: 50   # Maximum comments per day

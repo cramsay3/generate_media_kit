@@ -1,0 +1,21 @@
+# Large files that can cause Cursor to freeze
+playlist_contacts.txt
+*.zip
+*.jpg
+*.jpeg
+*.png
+*.kra
+_Media_Kit/
+__pycache__/
+*.pyc
+.git/
+
+# Log files that grow large and cause performance issues
+*.log
+campaign_output.txt
+instagram_follow.log
+*.json.bak
+
+# Progress tracking files (can be large)
+campaign_progress.json
+instagram_progress.json

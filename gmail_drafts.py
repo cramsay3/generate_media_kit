@@ -85,14 +85,17 @@ class GmailDraftCreator:
             if from_email:
                 message['from'] = from_email
             
-            # Detect if body is HTML
-            is_html = '<html>' in body.lower() or '<body>' in body.lower() or '<p>' in body.lower() or '<strong>' in body.lower() or '<a href' in body.lower()
+            # Detect if body is HTML - check for DOCTYPE, html tags, or common HTML elements
+            is_html = ('<!DOCTYPE' in body.upper() or 
+                      '<html>' in body.lower() or 
+                      '<body>' in body.lower() or 
+                      '<p>' in body.lower() or 
+                      '<strong>' in body.lower() or 
+                      '<a href' in body.lower() or
+                      '<div' in body.lower())
             
             if is_html:
-                # IMPORTANT: HTML part must come FIRST in multipart/alternative
-                # Gmail prefers HTML as the primary content type
-                
-                # Create HTML part with explicit headers - attach FIRST
+                # Force HTML-only for drafts too - no plain text fallback
                 msg_html = MIMEText(body, 'html', 'utf-8')
                 msg_html.set_charset('utf-8')
                 # Remove any existing Content-Type and set explicitly
@@ -101,21 +104,8 @@ class GmailDraftCreator:
                 msg_html.add_header('Content-Type', 'text/html; charset=utf-8')
                 msg_html.add_header('Content-Transfer-Encoding', 'quoted-printable')
                 
-                # Create minimal plain text version (Gmail fallback)
-                # Strip HTML tags but keep it minimal so Gmail prefers HTML
-                import re
-                plain_body = re.sub(r'<[^>]+>', '', body)
-                plain_body = re.sub(r'\s+', ' ', plain_body).strip()
-                plain_body = re.sub(r'\*\*', '', plain_body)  # Remove any remaining markdown
-                
-                msg_plain = MIMEText(plain_body, 'plain', 'utf-8')
-                msg_plain.set_charset('utf-8')
-                msg_plain.add_header('Content-Type', 'text/plain; charset=utf-8')
-                
-                # Attach HTML FIRST (Gmail will use this as primary)
+                # Attach HTML ONLY - no plain text fallback to force HTML rendering
                 message.attach(msg_html)
-                # Then attach plain text as fallback (minimal)
-                message.attach(msg_plain)
             else:
                 # Plain text only
                 msg_text = MIMEText(body, 'plain', 'utf-8')
@@ -182,7 +172,7 @@ class GmailDraftCreator:
         return results
     
     def send_email(self, to_email: str, subject: str, body: str, 
-                   from_email: Optional[str] = None) -> Optional[str]:
+                   from_email: Optional[str] = None, cc_email: Optional[str] = None) -> Optional[str]:
         """
         Send an email directly (not a draft).
         
@@ -191,6 +181,7 @@ class GmailDraftCreator:
             subject: Email subject
             body: Email body (HTML or plain text)
             from_email: Sender email (optional, uses authenticated account if not provided)
+            cc_email: CC email address (optional)
         
         Returns:
             Message ID if successful, None otherwise
@@ -205,6 +196,8 @@ class GmailDraftCreator:
             message['subject'] = subject
             if from_email:
                 message['from'] = from_email
+            if cc_email:
+                message['Cc'] = cc_email
             
             # Detect if body is HTML - check for DOCTYPE, html tags, or common HTML elements
             is_html = ('<!DOCTYPE' in body.upper() or 

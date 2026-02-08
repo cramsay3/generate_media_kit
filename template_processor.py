@@ -43,21 +43,32 @@ class TemplateProcessor:
         if not self.template_content:
             raise ValueError("Template not loaded")
         
+        # Generate fallback playlist name from email if missing (do this first)
+        playlist_name = contact.playlist_name
+        if not playlist_name and contact.email:
+            # Try to extract a name from email (e.g., "altrockplaylist@gmail.com" -> "Altrockplaylist")
+            email_local = contact.email.split('@')[0]
+            # Capitalize and clean up
+            playlist_name = email_local.replace('_', ' ').replace('.', ' ').title()
+        
         # Extract subject if it's in the template
         subject_match = re.search(r'\*\*Subject:\*\*\s*<<subject>>', self.template_content)
         if subject_match:
-            # Subject is in template, extract it
-            subject_line = re.search(r'\*\*Subject:\*\*\s*(.+?)(?:\n|$)', self.template_content)
-            if subject_line:
-                subject_template = subject_line.group(1).strip()
+            # Subject is in template, generate it based on contact info
+            if custom_subject:
+                subject_template = custom_subject
+            elif playlist_name:
+                subject_template = f"Music Submission for {playlist_name}"
+            elif contact.curator:
+                subject_template = f"Music Submission - {contact.curator}"
             else:
-                subject_template = "<<subject>>"
+                subject_template = "Music Submission"
         else:
             # Generate default subject
             if custom_subject:
                 subject_template = custom_subject
-            elif contact.playlist_name:
-                subject_template = f"Music Submission for {contact.playlist_name}"
+            elif playlist_name:
+                subject_template = f"Music Submission for {playlist_name}"
             elif contact.curator:
                 subject_template = f"Music Submission - {contact.curator}"
             else:
@@ -69,15 +80,15 @@ class TemplateProcessor:
         
         # Prepare replacement values
         replacements = {
-            'subject': self._generate_subject(contact, custom_subject),
-            'curator_name': contact.curator or 'there',
-            'custom_message': custom_message or "I hope this email finds you well. I'm reaching out because I believe my music would be a great fit for your playlist.",
-            'playlist_name': contact.playlist_name or 'your playlist',
+            'subject': subject_template,  # Use the subject we generated above
+            'curator_name': contact.curator or 'Curator',
+            'custom_message': custom_message or '',  # Empty if not provided - template should have content
+            'playlist_name': playlist_name or 'your playlist',
             'genres': relevant_genres or 'various genres',
             'followers': contact.followers or 'N/A',
             'spotify_url': contact.spotify_url or 'N/A',
             'artist_name': artist_name or '[Your Name]',
-            'additional_info': additional_info or '',
+            'additional_info': additional_info or '',  # Empty if not provided - template should have content
             'artist_spotify_link': artist_spotify_link or '[Your Spotify Link]',
             'artist_instagram': f"@{artist_instagram}" if artist_instagram and not artist_instagram.startswith('@') else (artist_instagram or '[Your Instagram]'),
             'artist_website': artist_website or '[Your Website]',
@@ -224,11 +235,22 @@ class TemplateProcessor:
             # Convert bold **text** to <strong> with explicit bold styling
             para_text = re.sub(r'\*\*(.+?)\*\*', r'<strong style="font-weight: bold; color: #2c3e50; font-family: Arial, Helvetica, sans-serif;">\1</strong>', para_text)
             
-            # Convert URLs to links with inline styles
+            # Convert markdown links [text](url) FIRST - before plain URLs
+            # Use a placeholder to protect URLs inside markdown links from being processed twice
+            markdown_links = {}
+            def replace_markdown_link(match):
+                placeholder = f"__MARKDOWN_LINK_{len(markdown_links)}__"
+                markdown_links[placeholder] = f'<a href="{match.group(2)}" style="color: #3498db; text-decoration: none;">{match.group(1)}</a>'
+                return placeholder
+            
+            para_text = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', replace_markdown_link, para_text)
+            
+            # Convert plain URLs to links with inline styles
             para_text = re.sub(r'(https?://[^\s<>"{}|\\^`\[\]]+)', r'<a href="\1" style="color: #3498db; text-decoration: none;">\1</a>', para_text)
             
-            # Convert markdown links [text](url) with inline styles
-            para_text = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2" style="color: #3498db; text-decoration: none;">\1</a>', para_text)
+            # Replace placeholders back with actual markdown link HTML
+            for placeholder, html in markdown_links.items():
+                para_text = para_text.replace(placeholder, html)
             
             html_lines.append(f'<p style="margin: 12px 0; line-height: 1.7; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #333333;">{para_text}</p>')
         

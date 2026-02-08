@@ -1,0 +1,1186 @@
+nohup: ignoring input
+[2026-02-07 17:14:35] ============================================================
+[2026-02-07 17:14:35] EMAIL CAMPAIGN STARTED
+[2026-02-07 17:14:35] ============================================================
+[2026-02-07 17:14:35] Log file: campaign.log
+[2026-02-07 17:14:35] Dry run: False
+[2026-02-07 17:14:35] 
+[2026-02-07 17:14:35] Resuming from previous run...
+[2026-02-07 17:14:35]   Already sent: 4
+[2026-02-07 17:14:35]   Failed: 0
+[2026-02-07 17:14:35] Step 1: Parsing playlist contacts...
+[2026-02-07 17:14:35]   ✓ Found 1735 contacts with emails
+[2026-02-07 17:14:35] Step 2: Filtering by genres...
+[2026-02-07 17:14:35]   ✓ 216 contacts match genre criteria
+[2026-02-07 17:14:35] Step 3: Validating emails...
+[2026-02-07 17:14:45]   Validated 50/216...
+[2026-02-07 17:14:51]   Validated 100/216...
+[2026-02-07 17:14:55]   Validated 150/216...
+[2026-02-07 17:15:03]   Validated 200/216...
+[2026-02-07 17:15:06]   ✓ 209 contacts have valid emails
+[2026-02-07 17:15:06] Step 4: Filtering already sent emails...
+[2026-02-07 17:15:06]   ✓ 189 contacts remaining to send
+[2026-02-07 17:15:06] Step 5: Generating email content...
+[2026-02-07 17:15:06]   ✓ Generated 189 email templates
+[2026-02-07 17:15:06] 
+[2026-02-07 17:15:06] Step 6: Authenticating with Gmail API...
+[2026-02-07 17:15:06]   ✓ Authenticated successfully
+[2026-02-07 17:15:06]   ✓ CC on all emails: charley@ramsays.us
+[2026-02-07 17:15:06] 
+[2026-02-07 17:15:06] ============================================================
+[2026-02-07 17:15:06] STARTING EMAIL SENDING
+[2026-02-07 17:15:06] Rate limits: 30-90s between emails
+[2026-02-07 17:15:06] Max per hour: 50
+[2026-02-07 17:15:06] Max per day: 200
+[2026-02-07 17:15:06] ============================================================
+[2026-02-07 17:15:06] 
+[2026-02-07 17:15:06] [1/189] Sending to: newmusic@nialler9.com
+[2026-02-07 17:15:06]   Playlist: Spotify Link
+[2026-02-07 17:15:06]   Curator: PSYCHEDELIC, POST-GRUNGE
+[2026-02-07 17:15:08]   ✓ Sent! Message ID: 19c3a633a9dcc137
+[2026-02-07 17:15:08] 
+[2026-02-07 17:15:08] [2/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:15:38] [2/189] Sending to: info@bigdata.fm
+[2026-02-07 17:15:38]   Playlist: NINJA,
+[2026-02-07 17:15:38]   Curator: PREVERB, NEO-PSYCHEDELIC,
+[2026-02-07 17:15:38]   ✓ Sent! Message ID: 19c3a63b385b4e81
+[2026-02-07 17:15:38] 
+[2026-02-07 17:15:38] [3/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:16:08] [3/189] Sending to: willd.film@gmail.com
+[2026-02-07 17:16:08]   Playlist: N/A
+[2026-02-07 17:16:08]   Curator: N/A
+[2026-02-07 17:16:09]   ✓ Sent! Message ID: 19c3a642b01297b2
+[2026-02-07 17:16:09] 
+[2026-02-07 17:16:09] [4/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:16:39] [4/189] Sending to: paul@dummymag.com
+[2026-02-07 17:16:39]   Playlist: Jespers favoriter
+[2026-02-07 17:16:39]   Curator: Nyhetsmorgon
+[2026-02-07 17:16:39]   ✓ Sent! Message ID: 19c3a64a368936e1
+[2026-02-07 17:16:39] 
+[2026-02-07 17:16:39] [5/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:17:09] [5/189] Sending to: contact@futureclassic.com
+[2026-02-07 17:17:09]   Playlist: SINGER/SONGWRITER
+[2026-02-07 17:17:09]   Curator: HOUSE, ACOUSTIC,COUNTRY,
+[2026-02-07 17:17:10]   ✓ Sent! Message ID: 19c3a651b646d584
+[2026-02-07 17:17:10] 
+[2026-02-07 17:17:10] [6/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:17:40] [6/189] Sending to: teejusmultimedia@gmail.com
+[2026-02-07 17:17:40]   Playlist: N/A
+[2026-02-07 17:17:40]   Curator: N/A
+[2026-02-07 17:17:41]   ✓ Sent! Message ID: 19c3a6592c216392
+[2026-02-07 17:17:41] 
+[2026-02-07 17:17:41] [7/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:18:11] [7/189] Sending to: jessicaoliveiraj@gmail.com
+[2026-02-07 17:18:11]   Playlist: N/A
+[2026-02-07 17:18:11]   Curator: N/A
+[2026-02-07 17:18:12]   ✓ Sent! Message ID: 19c3a660c1ddc6a2
+[2026-02-07 17:18:12] 
+[2026-02-07 17:18:12] [8/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:18:42] [8/189] Sending to: theastralpines@gmail.com
+[2026-02-07 17:18:42]   Playlist: N/A
+[2026-02-07 17:18:42]   Curator: N/A
+[2026-02-07 17:18:43]   ✓ Sent! Message ID: 19c3a6683bcd45d6
+[2026-02-07 17:18:43] 
+[2026-02-07 17:18:43] [9/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:19:13] [9/189] Sending to: jesper.borjesson@tv4.se
+[2026-02-07 17:19:13]   Playlist: Jam 88.3’s NEW MUSIC
+[2026-02-07 17:19:13]   Curator: COUNTER-CULTURE
+[2026-02-07 17:19:13]   ✓ Sent! Message ID: 19c3a66fb3146bef
+[2026-02-07 17:19:13] 
+[2026-02-07 17:19:13] [10/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:19:43] [10/189] Sending to: turbotito@gmail.com
+[2026-02-07 17:19:43]   Playlist: Olive Bee
+[2026-02-07 17:19:43]   Curator: Secretly Group
+[2026-02-07 17:19:44]   ✓ Sent! Message ID: 19c3a677218ab1b2
+[2026-02-07 17:19:44] 
+[2026-02-07 17:19:44] [11/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:20:14] [11/189] Sending to: newmusic@nialler9.com
+[2026-02-07 17:20:14]   Playlist: N/A
+[2026-02-07 17:20:14]   Curator: ALTERNATIVE, GRUNGE, SKA,REGGAE,
+[2026-02-07 17:20:14]   ✓ Sent! Message ID: 19c3a67eb1c36eea
+[2026-02-07 17:20:14] 
+[2026-02-07 17:20:14] [12/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:20:44] [12/189] Sending to: realgoodshit@tommisch.com
+[2026-02-07 17:20:44]   Playlist: N/A
+[2026-02-07 17:20:44]   Curator: CHILLWAVE,
+[2026-02-07 17:20:45]   ✓ Sent! Message ID: 19c3a68627a93513
+[2026-02-07 17:20:45] 
+[2026-02-07 17:20:45] [13/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:21:15] [13/189] Sending to: willd.film@gmail.com
+[2026-02-07 17:21:15]   Playlist: N/A
+[2026-02-07 17:21:15]   Curator: LO-FI, NEO-PSYCHEDELIC,
+[2026-02-07 17:21:16]   ✓ Sent! Message ID: 19c3a68d8ec93a6e
+[2026-02-07 17:21:16] 
+[2026-02-07 17:21:16] [14/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:21:46] [14/189] Sending to: babyitsabadbadlaw@gmail.com
+[2026-02-07 17:21:46]   Playlist: N/A
+[2026-02-07 17:21:46]   Curator: N/A
+[2026-02-07 17:21:47]   ✓ Sent! Message ID: 19c3a6950818c748
+[2026-02-07 17:21:47] 
+[2026-02-07 17:21:47] [15/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:22:17] [15/189] Sending to: friends@wearetheguard.com
+[2026-02-07 17:22:17]   Playlist: N/A
+[2026-02-07 17:22:17]   Curator: NEO-PSYCHEDELIC,
+[2026-02-07 17:22:17]   ✓ Sent! Message ID: 19c3a69c84d4f57d
+[2026-02-07 17:22:17] 
+[2026-02-07 17:22:17] [16/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:22:47] [16/189] Sending to: info@xunemag.com
+[2026-02-07 17:22:47]   Playlist: N/A
+[2026-02-07 17:22:47]   Curator: N/A
+[2026-02-07 17:22:48]   ✓ Sent! Message ID: 19c3a6a419029a58
+[2026-02-07 17:22:48] 
+[2026-02-07 17:22:48] [17/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:23:18] [17/189] Sending to: nielsmoelard@gmail.com
+[2026-02-07 17:23:18]   Playlist: 4,737 PROGRESSIVE
+[2026-02-07 17:23:18]   Curator: N/A
+[2026-02-07 17:23:19]   ✓ Sent! Message ID: 19c3a6ab8db55036
+[2026-02-07 17:23:19] 
+[2026-02-07 17:23:19] [18/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:23:49] [18/189] Sending to: bridget@truenorthrecords.com
+[2026-02-07 17:23:49]   Playlist: 1,808 SINGER/SONGWRITER,
+[2026-02-07 17:23:49]   Curator: 4,737 PROGRESSIVE
+[2026-02-07 17:23:49]   ✓ Sent! Message ID: 19c3a6b30dbe4820
+[2026-02-07 17:23:49] 
+[2026-02-07 17:23:49] [19/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:24:19] [19/189] Sending to: gerard@soundofus.com
+[2026-02-07 17:24:19]   Playlist: N/A
+[2026-02-07 17:24:19]   Curator: 1,113https://www.facebook.com/AlecWilsonIndependentPlaylister
+[2026-02-07 17:24:20]   ✓ Sent! Message ID: 19c3a6ba9a481b83
+[2026-02-07 17:24:20] 
+[2026-02-07 17:24:20] [20/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:24:50] [20/189] Sending to: info@kidzbop.com
+[2026-02-07 17:24:50]   Playlist: SOZO Playlists
+[2026-02-07 17:24:50]   Curator: NEW AGE, AMBIENT, PIANO, INSTRUMENTAL
+[2026-02-07 17:24:51]   ✓ Sent! Message ID: 19c3a6c21ea9d9a1
+[2026-02-07 17:24:51] 
+[2026-02-07 17:24:51] [21/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:25:21] [21/189] Sending to: info@gmo-thelabel.com
+[2026-02-07 17:25:21]   Playlist: rene.brockhaus
+[2026-02-07 17:25:21]   Curator: CHILDREN’S MUSIC
+[2026-02-07 17:25:21]   ✓ Sent! Message ID: 19c3a6c98e8407b9
+[2026-02-07 17:25:21] 
+[2026-02-07 17:25:21] [22/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:25:51] [22/189] Sending to: submit@slaysonics.com
+[2026-02-07 17:25:51]   Playlist: CHILLWAVE,
+[2026-02-07 17:25:51]   Curator: PSYCHILL
+[2026-02-07 17:25:52]   ✓ Sent! Message ID: 19c3a6d137e1b001
+[2026-02-07 17:25:52] 
+[2026-02-07 17:25:52] [23/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:26:22] [23/189] Sending to: jason.bentley@kcrw.com
+[2026-02-07 17:26:22]   Playlist: N/A
+[2026-02-07 17:26:22]   Curator: DOWNTEMPO
+[2026-02-07 17:26:23]   ✓ Sent! Message ID: 19c3a6d8b29f33ce
+[2026-02-07 17:26:23] 
+[2026-02-07 17:26:23] [24/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:26:53] [24/189] Sending to: info@coachella.com
+[2026-02-07 17:26:53]   Playlist: 1,153 CHILL, NINJA
+[2026-02-07 17:26:53]   Curator: N/A
+[2026-02-07 17:26:54]   ✓ Sent! Message ID: 19c3a6e044be02c1
+[2026-02-07 17:26:54] 
+[2026-02-07 17:26:54] [25/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:27:24] [25/189] Sending to: steezyasfvck@gmail.com
+[2026-02-07 17:27:24]   Playlist: CHILL
+[2026-02-07 17:27:24]   Curator: CLASSICAL,
+[2026-02-07 17:27:25]   ✓ Sent! Message ID: 19c3a6e7d8dee479
+[2026-02-07 17:27:25] 
+[2026-02-07 17:27:25] [26/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:27:55] [26/189] Sending to: service@ritualsusa.com
+[2026-02-07 17:27:55]   Playlist: CLASSICAL,
+[2026-02-07 17:27:55]   Curator: 2,514 VAPOR
+[2026-02-07 17:27:56]   ✓ Sent! Message ID: 19c3a6ef534a2a29
+[2026-02-07 17:27:56] 
+[2026-02-07 17:27:56] [27/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:28:26] [27/189] Sending to: info@indiemono.com
+[2026-02-07 17:28:26]   Playlist: N/A
+[2026-02-07 17:28:26]   Curator: CHILL, DOWNTEMPO
+[2026-02-07 17:28:26]   ✓ Sent! Message ID: 19c3a6f6a97ee150
+[2026-02-07 17:28:26] 
+[2026-02-07 17:28:26] [28/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:28:56] [28/189] Sending to: info@ultrarecords.com
+[2026-02-07 17:28:56]   Playlist: CHILL, DOWNTEMPO
+[2026-02-07 17:28:56]   Curator: LO-FI, VAPORWAVE SIMPSONWAVE, FRESHWAVE
+[2026-02-07 17:28:57]   ✓ Sent! Message ID: 19c3a6fe1e745c6d
+[2026-02-07 17:28:57] 
+[2026-02-07 17:28:57] [29/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:29:27] [29/189] Sending to: marcosnovo@gmail.com
+[2026-02-07 17:29:27]   Playlist: SINGER/SONGWRITER,
+[2026-02-07 17:29:27]   Curator: LO-FI
+[2026-02-07 17:29:27]   ✓ Sent! Message ID: 19c3a70586dfbc22
+[2026-02-07 17:29:27] 
+[2026-02-07 17:29:27] [30/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:29:57] [30/189] Sending to: estellecaswell@gmail.com
+[2026-02-07 17:29:57]   Playlist: EXPERIMENTAL
+[2026-02-07 17:29:57]   Curator: CHILLWAVE,
+[2026-02-07 17:29:58]   ✓ Sent! Message ID: 19c3a70d31c76584
+[2026-02-07 17:29:58] 
+[2026-02-07 17:29:58] [31/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:30:28] [31/189] Sending to: indiemixtape@uproxx.com
+[2026-02-07 17:30:28]   Playlist: N/A
+[2026-02-07 17:30:28]   Curator: N/A
+[2026-02-07 17:30:29]   ✓ Sent! Message ID: 19c3a7149e11d118
+[2026-02-07 17:30:29] 
+[2026-02-07 17:30:29] [32/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:30:59] [32/189] Sending to: info@bethelmusic.com
+[2026-02-07 17:30:59]   Playlist: N/A
+[2026-02-07 17:30:59]   Curator: CHILL, DOWNTEMPO
+[2026-02-07 17:30:59]   ✓ Sent! Message ID: 19c3a71c188be35f
+[2026-02-07 17:30:59] 
+[2026-02-07 17:30:59] [33/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:31:29] [33/189] Sending to: info@bethelmusic.com
+[2026-02-07 17:31:29]   Playlist: CHRISTIAN (ACOUSTIC)
+[2026-02-07 17:31:29]   Curator: N/A
+[2026-02-07 17:31:30]   ✓ Sent! Message ID: 19c3a72383d137f0
+[2026-02-07 17:31:30] 
+[2026-02-07 17:31:30] [34/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:32:00] [34/189] Sending to: cocoy.claravall@gmail.com
+[2026-02-07 17:32:00]   Playlist: Sarah Kat Hollmann
+[2026-02-07 17:32:00]   Curator: CHRISTIAN (ACOUSTIC)
+[2026-02-07 17:32:01]   ✓ Sent! Message ID: 19c3a72b1a4a2a07
+[2026-02-07 17:32:01] 
+[2026-02-07 17:32:01] [35/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:32:31] [35/189] Sending to: ben@saltofthesound.com
+[2026-02-07 17:32:31]   Playlist: CHRISTIAN (BACHATA, SALSA, URBAN, REGGAETON,
+[2026-02-07 17:32:31]   Curator: PRAISE)
+[2026-02-07 17:32:31]   ✓ Sent! Message ID: 19c3a7329108ca3f
+[2026-02-07 17:32:31] 
+[2026-02-07 17:32:31] [36/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:33:01] [36/189] Sending to: indiechristiansound@gmail.com
+[2026-02-07 17:33:01]   Playlist: CHRISTIAN (AMBIENT, DRONE, DOWNTEMPO,
+[2026-02-07 17:33:01]   Curator: NEO-CLASSICAL)
+[2026-02-07 17:33:02]   ✓ Sent! Message ID: 19c3a73a03bc3f97
+[2026-02-07 17:33:02] 
+[2026-02-07 17:33:02] [37/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:33:32] [37/189] Sending to: vidalmediaonline@gmail.com
+[2026-02-07 17:33:32]   Playlist: HOUSE, POST-GRUNGE,
+[2026-02-07 17:33:32]   Curator: SINGER/SONGWRITER)
+[2026-02-07 17:33:32]   ✓ Sent! Message ID: 19c3a74163281654
+[2026-02-07 17:33:32] 
+[2026-02-07 17:33:32] [38/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:34:02] [38/189] Sending to: info@rapzilla.com
+[2026-02-07 17:34:02]   Playlist: TRAP, BLUEGRASS, CHRISTMAS, COUNTRY,
+[2026-02-07 17:34:02]   Curator: CHRISTIAN DANCE
+[2026-02-07 17:34:03]   ✓ Sent! Message ID: 19c3a74909372384
+[2026-02-07 17:34:03] 
+[2026-02-07 17:34:03] [39/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:34:33] [39/189] Sending to: info@freeccm.com
+[2026-02-07 17:34:33]   Playlist: N/A
+[2026-02-07 17:34:33]   Curator: Instagram: https://www.instagram.com/rapzilla
+[2026-02-07 17:34:34]   ✓ Sent! Message ID: 19c3a7509ebde895
+[2026-02-07 17:34:34] 
+[2026-02-07 17:34:34] [40/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:35:04] [40/189] Sending to: raperoscristianos@gmail.com
+[2026-02-07 17:35:04]   Playlist: DREAMO,
+[2026-02-07 17:35:04]   Curator: SINGER/SONGWRITER,
+[2026-02-07 17:35:05]   ✓ Sent! Message ID: 19c3a758073d8e99
+[2026-02-07 17:35:05] 
+[2026-02-07 17:35:05] [41/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:35:35] [41/189] Sending to: ben@saltofthesound.com
+[2026-02-07 17:35:35]   Playlist: CHRISTIAN (ACOUSTIC)
+[2026-02-07 17:35:35]   Curator: 2,950 URBAN)
+[2026-02-07 17:35:36]   ✓ Sent! Message ID: 19c3a75f8517168b
+[2026-02-07 17:35:36] 
+[2026-02-07 17:35:36] [42/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:36:06] [42/189] Sending to: travis.whalen@lakeside.org
+[2026-02-07 17:36:06]   Playlist: N/A
+[2026-02-07 17:36:06]   Curator: N/A
+[2026-02-07 17:36:07]   ✓ Sent! Message ID: 19c3a7671b15b21a
+[2026-02-07 17:36:07] 
+[2026-02-07 17:36:07] [43/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:36:37] [43/189] Sending to: evan@summitlife.com
+[2026-02-07 17:36:37]   Playlist: N/A
+[2026-02-07 17:36:37]   Curator: N/A
+[2026-02-07 17:36:37]   ✓ Sent! Message ID: 19c3a76eb2296e62
+[2026-02-07 17:36:37] 
+[2026-02-07 17:36:37] [44/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:37:07] [44/189] Sending to: thegoodchristianmusicblog@gmail.com
+[2026-02-07 17:37:07]   Playlist: N/A
+[2026-02-07 17:37:07]   Curator: N/A
+[2026-02-07 17:37:08]   ✓ Sent! Message ID: 19c3a7760a4dc04b
+[2026-02-07 17:37:08] 
+[2026-02-07 17:37:08] [45/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:37:38] [45/189] Sending to: indiechristiansound@gmail.com
+[2026-02-07 17:37:38]   Playlist: N/A
+[2026-02-07 17:37:38]   Curator: N/A
+[2026-02-07 17:37:38]   ✓ Sent! Message ID: 19c3a77d9dba7344
+[2026-02-07 17:37:38] 
+[2026-02-07 17:37:38] [46/189] Waiting 30.0 seconds before next email...
+[2026-02-07 17:38:08] [46/189] Sending to: info@bethelmusic.com
+[2026-02-07 17:38:08]   Playlist: N/A
+[2026-02-07 17:38:08]   Curator: N/A
+[2026-02-07 17:38:09]   ✓ Sent! Message ID: 19c3a78509b5b483
+[2026-02-07 17:38:09] 
+[2026-02-07 17:38:09] [47/189] Hourly limit reached. Waiting 21.8 minutes...
+[2026-02-07 18:00:00] [47/189] Waiting 1310.4 seconds before next email...
+[2026-02-07 18:21:50] [47/189] Sending to: cocoy.claravall@gmail.com
+[2026-02-07 18:21:50]   Playlist: CHRISTMAS MUSIC
+[2026-02-07 18:21:50]   Curator: N/A
+[2026-02-07 18:21:52]   ✓ Sent! Message ID: 19c3aa057aa5aa10
+[2026-02-07 18:21:52] 
+[2026-02-07 18:21:52] [48/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:22:22] [48/189] Sending to: feedback@worshiptogether.com
+[2026-02-07 18:22:22]   Playlist: SINGER/SONGWRITER)
+[2026-02-07 18:22:22]   Curator: SINGER/SONGWRITER)
+[2026-02-07 18:22:23]   ✓ Sent! Message ID: 19c3aa0d1760b77d
+[2026-02-07 18:22:23] 
+[2026-02-07 18:22:23] [49/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:22:53] [49/189] Sending to: raperoscristianos@gmail.com
+[2026-02-07 18:22:53]   Playlist: SINGER/SONGWRITER)
+[2026-02-07 18:22:53]   Curator: LATIN (CHRISTIAN, GOSPEL)
+[2026-02-07 18:22:54]   ✓ Sent! Message ID: 19c3aa148e099ad4
+[2026-02-07 18:22:54] 
+[2026-02-07 18:22:54] [50/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:23:24] [50/189] Sending to: timglass@hcaz.org
+[2026-02-07 18:23:24]   Playlist: N/A
+[2026-02-07 18:23:24]   Curator: N/A
+[2026-02-07 18:23:25]   ✓ Sent! Message ID: 19c3aa1beec5d58b
+[2026-02-07 18:23:25] 
+[2026-02-07 18:23:25] [51/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:23:55] [51/189] Sending to: ben@saltofthesound.com
+[2026-02-07 18:23:55]   Playlist: Summer Worship
+[2026-02-07 18:23:55]   Curator: N/A
+[2026-02-07 18:23:56]   ✓ Sent! Message ID: 19c3aa23934f2bb4
+[2026-02-07 18:23:56] 
+[2026-02-07 18:23:56] [52/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:24:26] [52/189] Sending to: info@bethelmusic.com
+[2026-02-07 18:24:26]   Playlist: Summer Worship
+[2026-02-07 18:24:26]   Curator: Essential Worship
+[2026-02-07 18:24:26]   ✓ Sent! Message ID: 19c3aa2b0b9d7274
+[2026-02-07 18:24:26] 
+[2026-02-07 18:24:26] [53/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:24:56] [53/189] Sending to: social@themusicden.com
+[2026-02-07 18:24:56]   Playlist: Bethel Music
+[2026-02-07 18:24:56]   Curator: Bethel Music
+[2026-02-07 18:24:57]   ✓ Sent! Message ID: 19c3aa328e6c6b93
+[2026-02-07 18:24:57] 
+[2026-02-07 18:24:57] [54/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:25:27] [54/189] Sending to: raperoscristianos@gmail.com
+[2026-02-07 18:25:27]   Playlist: Top Gospel Hits
+[2026-02-07 18:25:27]   Curator: SOZO Playlists
+[2026-02-07 18:25:27]   ✓ Sent! Message ID: 19c3aa3a0fffc4d3
+[2026-02-07 18:25:27] 
+[2026-02-07 18:25:27] [55/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:25:57] [55/189] Sending to: chamderama@yahoo.com
+[2026-02-07 18:25:57]   Playlist: Top Gospel Worship
+[2026-02-07 18:25:57]   Curator: SOZO Playlists
+[2026-02-07 18:25:58]   ✓ Sent! Message ID: 19c3aa4165e3ef22
+[2026-02-07 18:25:58] 
+[2026-02-07 18:25:58] [56/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:26:28] [56/189] Sending to: ben@saltofthesound.com
+[2026-02-07 18:26:28]   Playlist: Alternative Press
+[2026-02-07 18:26:28]   Curator: PSYCHEDELIC)
+[2026-02-07 18:26:29]   ✓ Sent! Message ID: 19c3aa48e5ea47c1
+[2026-02-07 18:26:29] 
+[2026-02-07 18:26:29] [57/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:26:59] [57/189] Sending to: hallo@luiseliebt.de
+[2026-02-07 18:26:59]   Playlist: Justin Watkinson
+[2026-02-07 18:26:59]   Curator: CHRISTMAS MUSIC
+[2026-02-07 18:26:59]   ✓ Sent! Message ID: 19c3aa505d364701
+[2026-02-07 18:26:59] 
+[2026-02-07 18:26:59] [58/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:27:29] [58/189] Sending to: evan@summitlife.com
+[2026-02-07 18:27:29]   Playlist: CHRISTMAS MUSIC (GOSPEL)
+[2026-02-07 18:27:29]   Curator: : https://www.instagram.com/sozoplaylists
+[2026-02-07 18:27:30]   ✓ Sent! Message ID: 19c3aa57d58111f0
+[2026-02-07 18:27:30] 
+[2026-02-07 18:27:30] [59/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:28:00] [59/189] Sending to: sandrabeijer@gmail.com
+[2026-02-07 18:28:00]   Playlist: Evan Lemkuil
+[2026-02-07 18:28:00]   Curator: CHRISTMAS MUSIC
+[2026-02-07 18:28:00]   ✓ Sent! Message ID: 19c3aa5f40130248
+[2026-02-07 18:28:00] 
+[2026-02-07 18:28:00] [60/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:28:30] [60/189] Sending to: press@isaacshepard.com
+[2026-02-07 18:28:30]   Playlist: katesos75
+[2026-02-07 18:28:30]   Curator: CHRISTMAS MUSIC
+[2026-02-07 18:28:31]   ✓ Sent! Message ID: 19c3aa66cc13a2d5
+[2026-02-07 18:28:31] 
+[2026-02-07 18:28:31] [61/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:29:01] [61/189] Sending to: info@secretlygroup.com
+[2026-02-07 18:29:01]   Playlist: Cocoy Claravall
+[2026-02-07 18:29:01]   Curator: CHRISTMAS MUSIC (FILIPINO)
+[2026-02-07 18:29:02]   ✓ Sent! Message ID: 19c3aa6e46f74d85
+[2026-02-07 18:29:02] 
+[2026-02-07 18:29:02] [62/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:29:32] [62/189] Sending to: meghansroses@gmail.com
+[2026-02-07 18:29:32]   Playlist: CHRISTMAS
+[2026-02-07 18:29:32]   Curator: Secretly Group
+[2026-02-07 18:29:33]   ✓ Sent! Message ID: 19c3aa75d6194a14
+[2026-02-07 18:29:33] 
+[2026-02-07 18:29:33] [63/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:30:03] [63/189] Sending to: michael@michaelhyatt.com
+[2026-02-07 18:30:03]   Playlist: Boy in the Rain
+[2026-02-07 18:30:03]   Curator: MODERN CLASSICAL STRINGS
+[2026-02-07 18:30:03]   ✓ Sent! Message ID: 19c3aa7d51a76f18
+[2026-02-07 18:30:03] 
+[2026-02-07 18:30:03] [64/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:30:33] [64/189] Sending to: dutchtwang@yahoo.com
+[2026-02-07 18:30:33]   Playlist: Jesuss Vargas Gonzalez
+[2026-02-07 18:30:33]   Curator: COUNTRY, ACOUSTIC, SINGER/SONGWRITER, LATIN
+[2026-02-07 18:30:34]   ✓ Sent! Message ID: 19c3aa84c6f96ded
+[2026-02-07 18:30:34] 
+[2026-02-07 18:30:34] [65/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:31:04] [65/189] Sending to: info@pias.com
+[2026-02-07 18:31:04]   Playlist: Alt-Country
+[2026-02-07 18:31:04]   Curator: indiefolkradio
+[2026-02-07 18:31:04]   ✓ Sent! Message ID: 19c3aa8c4d95f5b8
+[2026-02-07 18:31:04] 
+[2026-02-07 18:31:04] [66/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:31:34] [66/189] Sending to: revoltplaylists@gmail.com
+[2026-02-07 18:31:34]   Playlist: Vogel
+[2026-02-07 18:31:34]   Curator: 2,397COUNTRY
+[2026-02-07 18:31:35]   ✓ Sent! Message ID: 19c3aa93b853b168
+[2026-02-07 18:31:35] 
+[2026-02-07 18:31:35] [67/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:32:05] [67/189] Sending to: kami.knake@gmail.com
+[2026-02-07 18:32:05]   Playlist: Songpickr: HolgerAMERICANA,
+[2026-02-07 18:32:05]   Curator: Chrisoph
+[2026-02-07 18:32:06]   ✓ Sent! Message ID: 19c3aa9b39a8fb68
+[2026-02-07 18:32:06] 
+[2026-02-07 18:32:06] [68/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:32:36] [68/189] Sending to: BLUEShello@sarahcomo.com
+[2026-02-07 18:32:36]   Playlist: revoltplaylists
+[2026-02-07 18:32:36]   Curator: AMERICANA
+[2026-02-07 18:32:36]   ✓ Sent! Message ID: 19c3aaa2a162a1f2
+[2026-02-07 18:32:36] 
+[2026-02-07 18:32:36] [69/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:33:06] [69/189] Sending to: management@ryanrobinettemusic.com
+[2026-02-07 18:33:06]   Playlist: Derrik AMERICANA,
+[2026-02-07 18:33:06]   Curator: Marry
+[2026-02-07 18:33:07]   ✓ Sent! Message ID: 19c3aaaa3f85bb0d
+[2026-02-07 18:33:07] 
+[2026-02-07 18:33:07] [70/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:33:37] [70/189] Sending to: info@moonlightsocialmusic.com
+[2026-02-07 18:33:37]   Playlist: Bro Country
+[2026-02-07 18:33:37]   Curator: Rob Werkowski
+[2026-02-07 18:33:38]   ✓ Sent! Message ID: 19c3aab1a09a314c
+[2026-02-07 18:33:38] 
+[2026-02-07 18:33:38] [71/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:34:08] [71/189] Sending to: info@onerpm.com
+[2026-02-07 18:34:08]   Playlist: Country Around the House
+[2026-02-07 18:34:08]   Curator: Kait Moore
+[2026-02-07 18:34:08]   ✓ Sent! Message ID: 19c3aab92f5642ec
+[2026-02-07 18:34:08] 
+[2026-02-07 18:34:08] [72/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:34:38] [72/189] Sending to: brandonfiechter@gmail.com
+[2026-02-07 18:34:38]   Playlist: Country mix great listening
+[2026-02-07 18:34:38]   Curator: Felicia Caldwell
+[2026-02-07 18:34:39]   ✓ Sent! Message ID: 19c3aac0a5bcfc27
+[2026-02-07 18:34:39] 
+[2026-02-07 18:34:39] [73/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:35:09] [73/189] Sending to: steve@whiskeyriff.com
+[2026-02-07 18:35:09]   Playlist: Country Up & Comers - Submit on Tunemunk.com
+[2026-02-07 18:35:09]   Curator: tunemunk
+[2026-02-07 18:35:10]   ✓ Sent! Message ID: 19c3aac81d01e2da
+[2026-02-07 18:35:10] 
+[2026-02-07 18:35:10] [74/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:35:40] [74/189] Sending to: revoltplaylists@gmail.com
+[2026-02-07 18:35:40]   Playlist: Day Drinking Country
+[2026-02-07 18:35:40]   Curator: Justin Gezelin
+[2026-02-07 18:35:40]   ✓ Sent! Message ID: 19c3aacf8e10c765
+[2026-02-07 18:35:40] 
+[2026-02-07 18:35:40] [75/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:36:10] [75/189] Sending to: revoltplaylists@gmail.com
+[2026-02-07 18:36:10]   Playlist: russhitt
+[2026-02-07 18:36:10]   Curator: MODERN COUNTRY
+[2026-02-07 18:36:11]   ✓ Sent! Message ID: 19c3aad715b2a952
+[2026-02-07 18:36:11] 
+[2026-02-07 18:36:11] [76/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:36:41] [76/189] Sending to: randy@vibenashville.com
+[2026-02-07 18:36:41]   Playlist: New Country
+[2026-02-07 18:36:41]   Curator: Mike Warner
+[2026-02-07 18:36:42]   ✓ Sent! Message ID: 19c3aadea8f7d917
+[2026-02-07 18:36:42] 
+[2026-02-07 18:36:42] [77/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:37:12] [77/189] Sending to: steve@whiskeyriff.com
+[2026-02-07 18:37:12]   Playlist: New Country – New Artists
+[2026-02-07 18:37:12]   Curator: Christopher Glass
+[2026-02-07 18:37:12]   ✓ Sent! Message ID: 19c3aae607831f74
+[2026-02-07 18:37:12] 
+[2026-02-07 18:37:12] [78/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:37:42] [78/189] Sending to: revoltplaylists@gmail.com
+[2026-02-07 18:37:42]   Playlist: Raised on Country
+[2026-02-07 18:37:42]   Curator: revoltplaylists
+[2026-02-07 18:37:43]   ✓ Sent! Message ID: 19c3aaed9ebd3a13
+[2026-02-07 18:37:43] 
+[2026-02-07 18:37:43] [79/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:38:13] [79/189] Sending to: contact@smithmusic.com
+[2026-02-07 18:38:13]   Playlist: Sunshine and Whiskey
+[2026-02-07 18:38:13]   Curator: Hector Aguilar
+[2026-02-07 18:38:14]   ✓ Sent! Message ID: 19c3aaf502291be9
+[2026-02-07 18:38:14] 
+[2026-02-07 18:38:14] [80/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:38:44] [80/189] Sending to: info@gerardoboue.com
+[2026-02-07 18:38:44]   Playlist: Double J Music
+[2026-02-07 18:38:44]   Curator: COVER SONGS (ACOUSTIC, PIANO)
+[2026-02-07 18:38:45]   ✓ Sent! Message ID: 19c3aafc983e2ae4
+[2026-02-07 18:38:45] 
+[2026-02-07 18:38:45] [81/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:39:15] [81/189] Sending to: aaron@die.net
+[2026-02-07 18:39:15]   Playlist: daveepa
+[2026-02-07 18:39:15]   Curator: : 4,611 PSY-TRANCE, HARDSTYLE
+[2026-02-07 18:39:15]   ✓ Sent! Message ID: 19c3ab0411bbca8e
+[2026-02-07 18:39:15] 
+[2026-02-07 18:39:15] [82/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:39:45] [82/189] Sending to: werabbitzofficial@gmail.com
+[2026-02-07 18:39:45]   Playlist: Ben Goodwin
+[2026-02-07 18:39:45]   Curator: COVER SONGS
+[2026-02-07 18:39:46]   ✓ Sent! Message ID: 19c3ab0b98aaa64c
+[2026-02-07 18:39:46] 
+[2026-02-07 18:39:46] [83/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:40:16] [83/189] Sending to: hello@orangejackalope.com
+[2026-02-07 18:40:16]   Playlist: Rollo Grady Music
+[2026-02-07 18:40:16]   Curator: COVER SONGS
+[2026-02-07 18:40:17]   ✓ Sent! Message ID: 19c3ab1319ef4b8c
+[2026-02-07 18:40:17] 
+[2026-02-07 18:40:17] [84/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:40:47] [84/189] Sending to: info@ultrarecords.com
+[2026-02-07 18:40:47]   Playlist: Indie Electro Daily
+[2026-02-07 18:40:47]   Curator: N/A
+[2026-02-07 18:40:47]   ✓ Sent! Message ID: 19c3ab1a8b3321fd
+[2026-02-07 18:40:47] 
+[2026-02-07 18:40:47] [85/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:41:17] [85/189] Sending to: contact@groovebassment.com
+[2026-02-07 18:41:17]   Playlist: Techno Tracks
+[2026-02-07 18:41:17]   Curator: N/A
+[2026-02-07 18:41:18]   ✓ Sent! Message ID: 19c3ab221b184179
+[2026-02-07 18:41:18] 
+[2026-02-07 18:41:18] [86/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:41:48] [86/189] Sending to: stanislav@khromov.se
+[2026-02-07 18:41:48]   Playlist: After Eating (Artist Shine Inc.)
+[2026-02-07 18:41:48]   Curator: VAPORWAVE
+[2026-02-07 18:41:48]   ✓ Sent! Message ID: 19c3ab2970a0dbdd
+[2026-02-07 18:41:48] 
+[2026-02-07 18:41:48] [87/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:42:18] [87/189] Sending to: amron@authenticm.com
+[2026-02-07 18:42:18]   Playlist: Remi Oyeniran
+[2026-02-07 18:42:18]   Curator: VAPORWAVE
+[2026-02-07 18:42:19]   ✓ Sent! Message ID: 19c3ab311170f2d3
+[2026-02-07 18:42:19] 
+[2026-02-07 18:42:19] [88/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:42:49] [88/189] Sending to: buzztracks@gmail.com
+[2026-02-07 18:42:49]   Playlist: >> morning coffee
+[2026-02-07 18:42:49]   Curator: carolinejoyrector
+[2026-02-07 18:42:50]   ✓ Sent! Message ID: 19c3ab389c3ceb03
+[2026-02-07 18:42:50] 
+[2026-02-07 18:42:50] [89/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:43:20] [89/189] Sending to: werabbitzofficial@gmail.com
+[2026-02-07 18:43:20]   Playlist: We Rabbitz
+[2026-02-07 18:43:20]   Curator: 1,782 AMERICANA,
+[2026-02-07 18:43:20]   ✓ Sent! Message ID: 19c3ab3feb60a308
+[2026-02-07 18:43:20] 
+[2026-02-07 18:43:20] [90/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:43:50] [90/189] Sending to: werabbitzofficial@gmail.com
+[2026-02-07 18:43:50]   Playlist: ACOUSTIC, AMBIENT, SMOOTH COUNTRY, SINGER/SONGWRITER,
+[2026-02-07 18:43:50]   Curator: CHILL, FINGERSTYLE
+[2026-02-07 18:43:51]   ✓ Sent! Message ID: 19c3ab4769f4b490
+[2026-02-07 18:43:51] 
+[2026-02-07 18:43:51] [91/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:44:21] [91/189] Sending to: danielgalfvensjo@gmail.com
+[2026-02-07 18:44:21]   Playlist: N/A
+[2026-02-07 18:44:21]   Curator: N/A
+[2026-02-07 18:44:22]   ✓ Sent! Message ID: 19c3ab4ef1fc3c59
+[2026-02-07 18:44:22] 
+[2026-02-07 18:44:22] [92/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:44:52] [92/189] Sending to: bridget@truenorthrecords.com
+[2026-02-07 18:44:52]   Playlist: Coffee Hideaway
+[2026-02-07 18:44:52]   Curator: EMO
+[2026-02-07 18:44:52]   ✓ Sent! Message ID: 19c3ab56697d2664
+[2026-02-07 18:44:52] 
+[2026-02-07 18:44:52] [93/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:45:22] [93/189] Sending to: songpickr@gmx.de
+[2026-02-07 18:45:22]   Playlist: Dark Indie
+[2026-02-07 18:45:22]   Curator: alexrainbirdmusic
+[2026-02-07 18:45:23]   ✓ Sent! Message ID: 19c3ab5dd60c9536
+[2026-02-07 18:45:23] 
+[2026-02-07 18:45:23] [94/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:45:53] [94/189] Sending to: teejusmultimedia@gmail.com
+[2026-02-07 18:45:53]   Playlist: Dark Indie
+[2026-02-07 18:45:53]   Curator: alexrainbirdmusic
+[2026-02-07 18:45:54]   ✓ Sent! Message ID: 19c3ab65483ffa55
+[2026-02-07 18:45:54] 
+[2026-02-07 18:45:54] [95/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:46:24] [95/189] Sending to: submit@pressthemusic.com
+[2026-02-07 18:46:24]   Playlist: Folky Fantastics
+[2026-02-07 18:46:24]   Curator: Assia Grazioli Venier
+[2026-02-07 18:46:24]   ✓ Sent! Message ID: 19c3ab6cd95269a5
+[2026-02-07 18:46:24] 
+[2026-02-07 18:46:24] [96/189] Waiting 30.0 seconds before next email...
+[2026-02-07 18:46:54] [96/189] Sending to: songpickr@gmx.de
+[2026-02-07 18:46:54]   Playlist: Funeral Blues
+[2026-02-07 18:46:54]   Curator: PressTheMusic
+[2026-02-07 18:46:55]   ✓ Sent! Message ID: 19c3ab744c631f35
+[2026-02-07 18:46:55] 
+[2026-02-07 18:46:55] [97/189] Hourly limit reached. Waiting 13.1 minutes...
+[2026-02-07 19:00:00] [97/189] Waiting 784.7 seconds before next email...
+[2026-02-07 19:13:04] [97/189] Sending to: info@indiemono.com
+[2026-02-07 19:13:04]   Playlist: Indie Folk
+[2026-02-07 19:13:04]   Curator: Bia Nobile
+[2026-02-07 19:13:06]   ✓ Sent! Message ID: 19c3acf3da1b2e93
+[2026-02-07 19:13:06] 
+[2026-02-07 19:13:06] [98/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:13:36] [98/189] Sending to: submit@slaysonics.com
+[2026-02-07 19:13:36]   Playlist: Indie Folk Rising
+[2026-02-07 19:13:36]   Curator: Indiemono
+[2026-02-07 19:13:37]   ✓ Sent! Message ID: 19c3acfb6a76a84e
+[2026-02-07 19:13:37] 
+[2026-02-07 19:13:37] [99/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:14:07] [99/189] Sending to: brown.c.savannah@gmail.com
+[2026-02-07 19:14:07]   Playlist: Light Songs for Lazy Sundays
+[2026-02-07 19:14:07]   Curator: little sad, little in love
+[2026-02-07 19:14:08]   ✓ Sent! Message ID: 19c3ad02c597fd3d
+[2026-02-07 19:14:08] 
+[2026-02-07 19:14:08] [100/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:14:38] [100/189] Sending to: bridget@truenorthrecords.com
+[2026-02-07 19:14:38]   Playlist: Light Songs for Lazy Sundays
+[2026-02-07 19:14:38]   Curator: little sad, little in love
+[2026-02-07 19:14:38]   ✓ Sent! Message ID: 19c3ad0a4250564c
+[2026-02-07 19:14:38] 
+[2026-02-07 19:14:38] [101/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:15:08] [101/189] Sending to: dilithiumrecords@gmail.com
+[2026-02-07 19:15:08]   Playlist: Joe Vuong
+[2026-02-07 19:15:08]   Curator: N/A
+[2026-02-07 19:15:08]   ✓ Sent! Message ID: 19c3ad11a46e3d7a
+[2026-02-07 19:15:08] 
+[2026-02-07 19:15:08] [102/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:15:38] [102/189] Sending to: hallo@luiseliebt.de
+[2026-02-07 19:15:38]   Playlist: New Indie
+[2026-02-07 19:15:38]   Curator: next to your bones
+[2026-02-07 19:15:39]   ✓ Sent! Message ID: 19c3ad1908558d2a
+[2026-02-07 19:15:39] 
+[2026-02-07 19:15:39] [103/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:16:09] [103/189] Sending to: nisse.knudsen@gmail.com
+[2026-02-07 19:16:09]   Playlist: Frank Turner
+[2026-02-07 19:16:09]   Curator: N/A
+[2026-02-07 19:16:09]   ✓ Sent! Message ID: 19c3ad20aabaac23
+[2026-02-07 19:16:09] 
+[2026-02-07 19:16:09] [104/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:16:39] [104/189] Sending to: lindseyrem.business@gmail.com
+[2026-02-07 19:16:39]   Playlist: PIANO ACOUSTIC | ( Cover - Sad Piano Songs - Romantic - Love …
+[2026-02-07 19:16:39]   Curator: N/A
+[2026-02-07 19:16:41]   ✓ Sent! Message ID: 19c3ad28200e9898
+[2026-02-07 19:16:41] 
+[2026-02-07 19:16:41] [105/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:17:11] [105/189] Sending to: songpickr@gmx.de
+[2026-02-07 19:17:11]   Playlist: Relaxing Road Trip Songs
+[2026-02-07 19:17:11]   Curator: N/A
+[2026-02-07 19:17:11]   ✓ Sent! Message ID: 19c3ad2fb89e747a
+[2026-02-07 19:17:11] 
+[2026-02-07 19:17:11] [106/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:17:41] [106/189] Sending to: werabbitzofficial@gmail.com
+[2026-02-07 19:17:41]   Playlist: Holger AMERICANA,
+[2026-02-07 19:17:41]   Curator: Chrisoph
+[2026-02-07 19:17:45]   ✓ Sent! Message ID: 19c3ad380dcfe842
+[2026-02-07 19:17:45] 
+[2026-02-07 19:17:45] [107/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:18:15] [107/189] Sending to: werabbitzofficial@gmail.com
+[2026-02-07 19:18:15]   Playlist: Chrisoph
+[2026-02-07 19:18:15]   Curator: Relaxing Road Trip Songs
+[2026-02-07 19:18:16]   ✓ Sent! Message ID: 19c3ad3f61547a3a
+[2026-02-07 19:18:16] 
+[2026-02-07 19:18:16] [108/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:18:46] [108/189] Sending to: werabbitzofficial@gmail.com
+[2026-02-07 19:18:46]   Playlist: SAD ACOUSTIC SONGS | ( Cover Piano | Guitar Covers Love | Relax | …We Rabbitz
+[2026-02-07 19:18:46]   Curator: We Rabbitz
+[2026-02-07 19:18:46]   ✓ Sent! Message ID: 19c3ad46fdd10352
+[2026-02-07 19:18:46] 
+[2026-02-07 19:18:46] [109/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:19:16] [109/189] Sending to: gnashmgmt@gmail.com
+[2026-02-07 19:19:16]   Playlist: Sad Songs - The Official Goodbye Playlist
+[2026-02-07 19:19:16]   Curator: N/A
+[2026-02-07 19:19:17]   ✓ Sent! Message ID: 19c3ad4e6c3b1e8e
+[2026-02-07 19:19:17] 
+[2026-02-07 19:19:17] [110/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:19:47] [110/189] Sending to: bridget@truenorthrecords.com
+[2026-02-07 19:19:47]   Playlist: sad songs
+[2026-02-07 19:19:47]   Curator: Gnash
+[2026-02-07 19:19:47]   ✓ Sent! Message ID: 19c3ad55c50abea7
+[2026-02-07 19:19:47] 
+[2026-02-07 19:19:47] [111/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:20:17] [111/189] Sending to: jess@jschmittphoto.com
+[2026-02-07 19:20:17]   Playlist: Jason Mraz
+[2026-02-07 19:20:17]   Curator: theuniplanet
+[2026-02-07 19:20:20]   ✓ Sent! Message ID: 19c3ad5dfd0f7631
+[2026-02-07 19:20:20] 
+[2026-02-07 19:20:20] [112/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:20:50] [112/189] Sending to: teejusmultimedia@gmail.com
+[2026-02-07 19:20:50]   Playlist: N/A
+[2026-02-07 19:20:50]   Curator: Mallory Elizabeth Chacon
+[2026-02-07 19:20:51]   ✓ Sent! Message ID: 19c3ad656484328e
+[2026-02-07 19:20:51] 
+[2026-02-07 19:20:51] [113/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:21:21] [113/189] Sending to: hello@ryan-schreiber.com
+[2026-02-07 19:21:21]   Playlist: Red Zipper
+[2026-02-07 19:21:21]   Curator: Brose Royce
+[2026-02-07 19:21:21]   ✓ Sent! Message ID: 19c3ad6cc58fa819
+[2026-02-07 19:21:21] 
+[2026-02-07 19:21:21] [114/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:21:51] [114/189] Sending to: 30secondrock@gmail.com
+[2026-02-07 19:21:51]   Playlist: 30 Essential Post-Rock Songs
+[2026-02-07 19:21:51]   Curator: Stereogum
+[2026-02-07 19:21:53]   ✓ Sent! Message ID: 19c3ad748ca55bed
+[2026-02-07 19:21:53] 
+[2026-02-07 19:21:53] [115/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:22:23] [115/189] Sending to: info@sumerianrecords.com
+[2026-02-07 19:22:23]   Playlist: Alt Nation – Alt 18 - Current
+[2026-02-07 19:22:23]   Curator: Chris Van Stone
+[2026-02-07 19:22:23]   ✓ Sent! Message ID: 19c3ad7be73ad7b5
+[2026-02-07 19:22:23] 
+[2026-02-07 19:22:23] [116/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:22:53] [116/189] Sending to: lindseyrem.business@gmail.com
+[2026-02-07 19:22:53]   Playlist: angsty beach goth
+[2026-02-07 19:22:53]   Curator: lindseyrem (Lindsey Rempalski)
+[2026-02-07 19:22:54]   ✓ Sent! Message ID: 19c3ad83438c2f46
+[2026-02-07 19:22:54] 
+[2026-02-07 19:22:54] [117/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:23:24] [117/189] Sending to: lindseyrem.business@gmail.com
+[2026-02-07 19:23:24]   Playlist: Ashton's playlist
+[2026-02-07 19:23:24]   Curator: N/A
+[2026-02-07 19:23:24]   ✓ Sent! Message ID: 19c3ad8acf8773b0
+[2026-02-07 19:23:24] 
+[2026-02-07 19:23:24] [118/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:23:54] [118/189] Sending to: business.shannonbarker@gmail.com
+[2026-02-07 19:23:54]   Playlist: Celtic Rock
+[2026-02-07 19:23:54]   Curator: Adrian Schneider
+[2026-02-07 19:23:55]   ✓ Sent! Message ID: 19c3ad92359e02e7
+[2026-02-07 19:23:55] 
+[2026-02-07 19:23:55] [119/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:24:25] [119/189] Sending to: info@fortheloveofbands.com
+[2026-02-07 19:24:25]   Playlist: Dreamy Indie
+[2026-02-07 19:24:25]   Curator: N/A
+[2026-02-07 19:24:25]   ✓ Sent! Message ID: 19c3ad99ab420671
+[2026-02-07 19:24:25] 
+[2026-02-07 19:24:25] [120/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:24:55] [120/189] Sending to: dilithiumrecords@gmail.com
+[2026-02-07 19:24:55]   Playlist: EMO
+[2026-02-07 19:24:55]   Curator: wombatwill
+[2026-02-07 19:24:56]   ✓ Sent! Message ID: 19c3ada104f20e3a
+[2026-02-07 19:24:56] 
+[2026-02-07 19:24:56] [121/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:25:26] [121/189] Sending to: indiemixtape@uproxx.com
+[2026-02-07 19:25:26]   Playlist: Essential Shoegaze
+[2026-02-07 19:25:26]   Curator: N/A
+[2026-02-07 19:25:41]   ✓ Sent! Message ID: 19c3adac01329f05
+[2026-02-07 19:25:41] 
+[2026-02-07 19:25:41] [122/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:26:11] [122/189] Sending to: jesea@highroadpublicity.com
+[2026-02-07 19:26:11]   Playlist: Feel good tunes
+[2026-02-07 19:26:11]   Curator: Susan Stiletti
+[2026-02-07 19:26:11]   ✓ Sent! Message ID: 19c3adb388483bab
+[2026-02-07 19:26:11] 
+[2026-02-07 19:26:11] [123/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:26:41] [123/189] Sending to: globalmusicreach@gmail.com
+[2026-02-07 19:26:41]   Playlist: The Fresh Ten: Indie
+[2026-02-07 19:26:41]   Curator: The Fresh Ten
+[2026-02-07 19:26:48]   ✓ Sent! Message ID: 19c3adbc6b707e10
+[2026-02-07 19:26:48] 
+[2026-02-07 19:26:48] [124/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:27:18] [124/189] Sending to: amron@authenticm.com
+[2026-02-07 19:27:18]   Playlist: Goin' Down South
+[2026-02-07 19:27:18]   Curator: Old Row
+[2026-02-07 19:27:18]   ✓ Sent! Message ID: 19c3adc3fb26f0e3
+[2026-02-07 19:27:18] 
+[2026-02-07 19:27:18] [125/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:27:48] [125/189] Sending to: submit@thedrunkencoconut.com
+[2026-02-07 19:27:48]   Playlist: Hoy empieza todo - Los melocotonazos de la semana
+[2026-02-07 19:27:48]   Curator: Radio 3
+[2026-02-07 19:27:49]   ✓ Sent! Message ID: 19c3adcb4af2f1c8
+[2026-02-07 19:27:49] 
+[2026-02-07 19:27:49] [126/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:28:19] [126/189] Sending to: 30secondrock@gmail.com
+[2026-02-07 19:28:19]   Playlist: Indie and go
+[2026-02-07 19:28:19]   Curator: Canal OFF
+[2026-02-07 19:28:19]   ✓ Sent! Message ID: 19c3add2c35012c8
+[2026-02-07 19:28:19] 
+[2026-02-07 19:28:19] [127/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:28:49] [127/189] Sending to: playlistboutique@gmail.com
+[2026-02-07 19:28:49]   Playlist: Indie Daily
+[2026-02-07 19:28:49]   Curator: N/A
+[2026-02-07 19:28:50]   ✓ Sent! Message ID: 19c3adda58e53d4f
+[2026-02-07 19:28:50] 
+[2026-02-07 19:28:50] [128/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:29:20] [128/189] Sending to: info@dailyplaylists.com
+[2026-02-07 19:29:20]   Playlist: Indie Boutique
+[2026-02-07 19:29:20]   Curator: Jonathan Good
+[2026-02-07 19:29:20]   ✓ Sent! Message ID: 19c3ade1c4d6ce5c
+[2026-02-07 19:29:20] 
+[2026-02-07 19:29:20] [129/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:29:50] [129/189] Sending to: willd.film@gmail.com
+[2026-02-07 19:29:50]   Playlist: NEO-PSYCHEDELIC
+[2026-02-07 19:29:50]   Curator: Indie Rock
+[2026-02-07 19:29:51]   ✓ Sent! Message ID: 19c3ade92db413d1
+[2026-02-07 19:29:51] 
+[2026-02-07 19:29:51] [130/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:30:21] [130/189] Sending to: info@pias.com
+[2026-02-07 19:30:21]   Playlist: Indie Workout
+[2026-02-07 19:30:21]   Curator: Playlists
+[2026-02-07 19:30:21]   ✓ Sent! Message ID: 19c3adf0a4ad9df2
+[2026-02-07 19:30:21] 
+[2026-02-07 19:30:21] [131/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:30:51] [131/189] Sending to: indiexindiemail@gmail.com
+[2026-02-07 19:30:51]   Playlist: Indie X Pop
+[2026-02-07 19:30:51]   Curator: N/A
+[2026-02-07 19:30:52]   ✓ Sent! Message ID: 19c3adf81e70000f
+[2026-02-07 19:30:52] 
+[2026-02-07 19:30:52] [132/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:31:22] [132/189] Sending to: info@fortheloveofbands.com
+[2026-02-07 19:31:22]   Playlist: Lazy Indie Morning
+[2026-02-07 19:31:22]   Curator: Luke's playlist
+[2026-02-07 19:31:22]   ✓ Sent! Message ID: 19c3adff9a86259b
+[2026-02-07 19:31:22] 
+[2026-02-07 19:31:22] [133/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:31:52] [133/189] Sending to: info@indiemono.com
+[2026-02-07 19:31:52]   Playlist: Gerardo Boué
+[2026-02-07 19:31:52]   Curator: N/A
+[2026-02-07 19:31:53]   ✓ Sent! Message ID: 19c3ae06ff219c67
+[2026-02-07 19:31:53] 
+[2026-02-07 19:31:53] [134/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:32:23] [134/189] Sending to: info@dailyplaylists.com
+[2026-02-07 19:32:23]   Playlist: Miguel Sales
+[2026-02-07 19:32:23]   Curator: N/A
+[2026-02-07 19:32:24]   ✓ Sent! Message ID: 19c3ae0e8ea753b0
+[2026-02-07 19:32:24] 
+[2026-02-07 19:32:24] [135/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:32:54] [135/189] Sending to: info@delicieuse-musique.com
+[2026-02-07 19:32:54]   Playlist: N/A
+[2026-02-07 19:32:54]   Curator: Miguel Sales
+[2026-02-07 19:32:55]   ✓ Sent! Message ID: 19c3ae1617d53db7
+[2026-02-07 19:32:55] 
+[2026-02-07 19:32:55] [136/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:33:25] [136/189] Sending to: info@pias.com
+[2026-02-07 19:33:25]   Playlist: shoegaze & dreampop
+[2026-02-07 19:33:25]   Curator: N/A
+[2026-02-07 19:33:25]   ✓ Sent! Message ID: 19c3ae1d83dfa5c0
+[2026-02-07 19:33:25] 
+[2026-02-07 19:33:25] [137/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:33:55] [137/189] Sending to: 30secondrock@gmail.com
+[2026-02-07 19:33:55]   Playlist: Slow Rock/Love Songs
+[2026-02-07 19:33:55]   Curator: John Fleer
+[2026-02-07 19:33:56]   ✓ Sent! Message ID: 19c3ae24f51b39e0
+[2026-02-07 19:33:56] 
+[2026-02-07 19:33:56] [138/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:34:26] [138/189] Sending to: indiecastleradiosubmissions@gmail.com
+[2026-02-07 19:34:26]   Playlist: Songs White People Get Lit To
+[2026-02-07 19:34:26]   Curator: 30SecondRock
+[2026-02-07 19:34:26]   ✓ Sent! Message ID: 19c3ae2c7693045b
+[2026-02-07 19:34:26] 
+[2026-02-07 19:34:26] [139/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:34:56] [139/189] Sending to: info@radioactive.se
+[2026-02-07 19:34:56]   Playlist: Sweet & Soft.
+[2026-02-07 19:34:56]   Curator: SWORKIT
+[2026-02-07 19:34:57]   ✓ Sent! Message ID: 19c3ae33eb45ec9c
+[2026-02-07 19:34:57] 
+[2026-02-07 19:34:57] [140/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:35:27] [140/189] Sending to: stopifycanada@gmail.com
+[2026-02-07 19:35:27]   Playlist: StuBru: De Hotlist (Wekelijkse update)
+[2026-02-07 19:35:27]   Curator: Jan Raedschelders
+[2026-02-07 19:35:28]   ✓ Sent! Message ID: 19c3ae3b6735805d
+[2026-02-07 19:35:28] 
+[2026-02-07 19:35:28] [141/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:35:58] [141/189] Sending to: info@onerpm.com
+[2026-02-07 19:35:58]   Playlist: Undiscovered & Brilliant
+[2026-02-07 19:35:58]   Curator: N/A
+[2026-02-07 19:35:58]   ✓ Sent! Message ID: 19c3ae42e92f65d2
+[2026-02-07 19:35:58] 
+[2026-02-07 19:35:58] [142/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:36:28] [142/189] Sending to: info@indiemono.com
+[2026-02-07 19:36:28]   Playlist: Wave Of Good Noise
+[2026-02-07 19:36:28]   Curator: N/A
+[2026-02-07 19:36:29]   ✓ Sent! Message ID: 19c3ae4a64f556dd
+[2026-02-07 19:36:29] 
+[2026-02-07 19:36:29] [143/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:36:59] [143/189] Sending to: teejusmultimedia@gmail.com
+[2026-02-07 19:36:59]   Playlist: What's Popping?
+[2026-02-07 19:36:59]   Curator: Indie Mixtape
+[2026-02-07 19:37:00]   ✓ Sent! Message ID: 19c3ae51e74f45b1
+[2026-02-07 19:37:00] 
+[2026-02-07 19:37:00] [144/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:37:30] [144/189] Sending to: guitarlancer@hotmail.com
+[2026-02-07 19:37:30]   Playlist: carolinejoyrector
+[2026-02-07 19:37:30]   Curator: INSTRUMENTAL (ACOUSTIC GUITAR)
+[2026-02-07 19:37:30]   ✓ Sent! Message ID: 19c3ae5974f7bd71
+[2026-02-07 19:37:30] 
+[2026-02-07 19:37:30] [145/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:38:00] [145/189] Sending to: younglionsdance@yahoo.com
+[2026-02-07 19:38:00]   Playlist: INSTRUMENTAL (CELTIC, MEDIEVAL, NEW AGE)
+[2026-02-07 19:38:00]   Curator: INSTRUMENTAL (BLUEGRASS)
+[2026-02-07 19:38:01]   ✓ Sent! Message ID: 19c3ae60e47cda05
+[2026-02-07 19:38:01] 
+[2026-02-07 19:38:01] [146/189] Waiting 30.0 seconds before next email...
+[2026-02-07 19:38:31] [146/189] Sending to: ketchummusic@hotmail.com
+[2026-02-07 19:38:31]   Playlist: Alec Wilson
+[2026-02-07 19:38:31]   Curator: INSTRUMENTAL (ACOUSTIC GUITAR)
+[2026-02-07 19:38:32]   ✓ Sent! Message ID: 19c3ae68658974a6
+[2026-02-07 19:38:32] 
+[2026-02-07 19:38:32] [147/189] Hourly limit reached. Waiting 21.5 minutes...
+[2026-02-07 20:00:00] [147/189] Waiting 1287.6 seconds before next email...
+[2026-02-07 20:21:27] [147/189] Sending to: norm.zylstra@gmail.com
+[2026-02-07 20:21:27]   Playlist: losshack
+[2026-02-07 20:21:27]   Curator: INSTRUMENTAL (ACOUSTIC GUITAR)
+[2026-02-07 20:21:28]   ✓ Sent! Message ID: 19c3b0dd7d560e50
+[2026-02-07 20:21:28] 
+[2026-02-07 20:21:28] [148/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:21:58] [148/189] Sending to: elyjaffemusic@gmail.com
+[2026-02-07 20:21:58]   Playlist: Guitars n' Roses - Love Song Instrumentals
+[2026-02-07 20:21:58]   Curator: N/A
+[2026-02-07 20:22:01]   ✓ Sent! Message ID: 19c3b0e562515945
+[2026-02-07 20:22:01] 
+[2026-02-07 20:22:01] [149/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:22:31] [149/189] Sending to: brandonfiechter@gmail.com
+[2026-02-07 20:22:31]   Playlist: Cocoy Claravall
+[2026-02-07 20:22:31]   Curator: INSTRUMENTAL (ACOUSTIC GUITAR COVERS)
+[2026-02-07 20:22:32]   ✓ Sent! Message ID: 19c3b0ecf442cadd
+[2026-02-07 20:22:32] 
+[2026-02-07 20:22:32] [150/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:23:02] [150/189] Sending to: mayermusic@hotmail.com
+[2026-02-07 20:23:02]   Playlist: Jacqueline Luna
+[2026-02-07 20:23:02]   Curator: INSTRUMENTAL (PIANO)
+[2026-02-07 20:23:02]   ✓ Sent! Message ID: 19c3b0f4702727dd
+[2026-02-07 20:23:02] 
+[2026-02-07 20:23:02] [151/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:23:32] [151/189] Sending to: info@sfjazz.org
+[2026-02-07 20:23:32]   Playlist: Audiophile High End
+[2026-02-07 20:23:32]   Curator: René Scheilen
+[2026-02-07 20:23:33]   ✓ Sent! Message ID: 19c3b0fbda7b7e08
+[2026-02-07 20:23:33] 
+[2026-02-07 20:23:33] [152/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:24:03] [152/189] Sending to: katymstringer@gmail.com
+[2026-02-07 20:24:03]   Playlist: August Sandberg
+[2026-02-07 20:24:03]   Curator: 4,399 CABARET,
+[2026-02-07 20:24:04]   ✓ Sent! Message ID: 19c3b10349b130ef
+[2026-02-07 20:24:04] 
+[2026-02-07 20:24:04] [153/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:24:34] [153/189] Sending to: songpickr@gmx.de
+[2026-02-07 20:24:34]   Playlist: N/A
+[2026-02-07 20:24:34]   Curator: Jazzfy
+[2026-02-07 20:24:34]   ✓ Sent! Message ID: 19c3b10acc142c01
+[2026-02-07 20:24:34] 
+[2026-02-07 20:24:34] [154/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:25:04] [154/189] Sending to: info@jazzfy.com
+[2026-02-07 20:25:04]   Playlist: Jazz it Up
+[2026-02-07 20:25:04]   Curator: Radial
+[2026-02-07 20:25:05]   ✓ Sent! Message ID: 19c3b11254bf3b06
+[2026-02-07 20:25:05] 
+[2026-02-07 20:25:05] [155/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:25:35] [155/189] Sending to: contato@hugogloss.com
+[2026-02-07 20:25:35]   Playlist: Trapstyle Records
+[2026-02-07 20:25:35]   Curator: LATIN TRAP
+[2026-02-07 20:25:36]   ✓ Sent! Message ID: 19c3b119d5e648ce
+[2026-02-07 20:25:36] 
+[2026-02-07 20:25:36] [156/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:26:06] [156/189] Sending to: info@yogagirl.com
+[2026-02-07 20:26:06]   Playlist: Latino AlterNATIVO
+[2026-02-07 20:26:06]   Curator: ONErpm
+[2026-02-07 20:26:06]   ✓ Sent! Message ID: 19c3b12148ec56df
+[2026-02-07 20:26:06] 
+[2026-02-07 20:26:06] [157/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:26:36] [157/189] Sending to: contacto@pacificspain.com
+[2026-02-07 20:26:36]   Playlist: Top Playlists
+[2026-02-07 20:26:36]   Curator: REGGAETON, TROPICAL, LATIN
+[2026-02-07 20:26:37]   ✓ Sent! Message ID: 19c3b128c52d5889
+[2026-02-07 20:26:37] 
+[2026-02-07 20:26:37] [158/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:27:07] [158/189] Sending to: info@onerpm.com
+[2026-02-07 20:27:07]   Playlist: Billboard
+[2026-02-07 20:27:07]   Curator: LGBTQ
+[2026-02-07 20:27:08]   ✓ Sent! Message ID: 19c3b130204e943e
+[2026-02-07 20:27:08] 
+[2026-02-07 20:27:08] [159/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:27:38] [159/189] Sending to: infotopplaylists@gmail.com
+[2026-02-07 20:27:38]   Playlist: Canal OFF
+[2026-02-07 20:27:38]   Curator: BRAZIL (MPB, SAMBA, NEO MELLOW)
+[2026-02-07 20:27:38]   ✓ Sent! Message ID: 19c3b137acf279a4
+[2026-02-07 20:27:38] 
+[2026-02-07 20:27:38] [160/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:28:08] [160/189] Sending to: info@brownswoodrecordings.com
+[2026-02-07 20:28:08]   Playlist: German Angst
+[2026-02-07 20:28:08]   Curator: OFFSHORE
+[2026-02-07 20:28:09]   ✓ Sent! Message ID: 19c3b13f3b21dcfe
+[2026-02-07 20:28:09] 
+[2026-02-07 20:28:09] [161/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:28:39] [161/189] Sending to: hello@icelandmusic.is
+[2026-02-07 20:28:39]   Playlist: BRAZIL (LATIN, SAMBA, FORRO, BOSSANOVA, PAGODE) 3,158
+[2026-02-07 20:28:39]   Curator: AUSTRALIA, NEW ZEALAND (NEO-PSYCHEDELIC,942
+[2026-02-07 20:28:40]   ✓ Sent! Message ID: 19c3b146f1422064
+[2026-02-07 20:28:40] 
+[2026-02-07 20:28:40] [162/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:29:10] [162/189] Sending to: hello@icelandmusic.is
+[2026-02-07 20:29:10]   Playlist: Icelandic Atmospheric / Soundtrack
+[2026-02-07 20:29:10]   Curator: ICELAND (INSTRUMENTAL, AMBIENT, ATMOSPHERIC, SOUNDTRACK)
+[2026-02-07 20:29:11]   ✓ Sent! Message ID: 19c3b14e77d52780
+[2026-02-07 20:29:11] 
+[2026-02-07 20:29:11] [163/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:29:41] [163/189] Sending to: hello@icelandmusic.is
+[2026-02-07 20:29:41]   Playlist: Indie Italiano
+[2026-02-07 20:29:41]   Curator: Icelandic Indie Music
+[2026-02-07 20:29:42]   ✓ Sent! Message ID: 19c3b155fcdd2c3a
+[2026-02-07 20:29:42] 
+[2026-02-07 20:29:42] [164/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:30:12] [164/189] Sending to: contato@portalmaisbrasil.com.br
+[2026-02-07 20:30:12]   Playlist: Mais Brasil
+[2026-02-07 20:30:12]   Curator: New British Artists
+[2026-02-07 20:30:13]   ✓ Sent! Message ID: 19c3b15d623cf3cb
+[2026-02-07 20:30:13] 
+[2026-02-07 20:30:13] [165/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:30:43] [165/189] Sending to: info@onerpm.com
+[2026-02-07 20:30:43]   Playlist: Nyhete
+[2026-02-07 20:30:43]   Curator: NPS Music
+[2026-02-07 20:30:43]   ✓ Sent! Message ID: 19c3b164ffb99ba6
+[2026-02-07 20:30:43] 
+[2026-02-07 20:30:43] [166/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:31:13] [166/189] Sending to: ron@rocknytt.net
+[2026-02-07 20:31:13]   Playlist: Rock & Metal Block
+[2026-02-07 20:31:13]   Curator: Nariman Dastpak - N.O.D. Music
+[2026-02-07 20:31:14]   ✓ Sent! Message ID: 19c3b16c7c6a9386
+[2026-02-07 20:31:14] 
+[2026-02-07 20:31:14] [167/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:31:44] [167/189] Sending to: service@ritualsusa.com
+[2026-02-07 20:31:44]   Playlist: Meditation Relax
+[2026-02-07 20:31:44]   Curator: NEW AGE, MEDITATION
+[2026-02-07 20:31:45]   ✓ Sent! Message ID: 19c3b173d6ffb757
+[2026-02-07 20:31:45] 
+[2026-02-07 20:31:45] [168/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:32:15] [168/189] Sending to: matti@mattipaalanen.com
+[2026-02-07 20:32:15]   Playlist: 887SOUNDTRACK,
+[2026-02-07 20:32:15]   Curator: FOCUS, DOWNTEMPO, FINGERSTYLE, AMBIENT
+[2026-02-07 20:32:15]   ✓ Sent! Message ID: 19c3b17b521a6179
+[2026-02-07 20:32:15] 
+[2026-02-07 20:32:15] [169/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:32:45] [169/189] Sending to: support@sworkit.com
+[2026-02-07 20:32:45]   Playlist: Yoga Inspired - Sworkit Workout Playlist
+[2026-02-07 20:32:45]   Curator: SWORKIT
+[2026-02-07 20:32:46]   ✓ Sent! Message ID: 19c3b182cb76daef
+[2026-02-07 20:32:46] 
+[2026-02-07 20:32:46] [170/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:33:16] [170/189] Sending to: meghansroses@gmail.com
+[2026-02-07 20:33:16]   Playlist: an ode to autumn
+[2026-02-07 20:33:16]   Curator: N/A
+[2026-02-07 20:33:16]   ✓ Sent! Message ID: 19c3b18a57c774b3
+[2026-02-07 20:33:16] 
+[2026-02-07 20:33:16] [171/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:33:46] [171/189] Sending to: werabbitzofficial@gmail.com
+[2026-02-07 20:33:46]   Playlist: Dariadaria Morning Uplift
+[2026-02-07 20:33:46]   Curator: dariadaria
+[2026-02-07 20:33:48]   ✓ Sent! Message ID: 19c3b1921620601e
+[2026-02-07 20:33:48] 
+[2026-02-07 20:33:48] [172/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:34:18] [172/189] Sending to: 180grados@rtve.es
+[2026-02-07 20:34:18]   Playlist: Dariadaria Office Tunes
+[2026-02-07 20:34:18]   Curator: dariadaria
+[2026-02-07 20:34:19]   ✓ Sent! Message ID: 19c3b1998e15be07
+[2026-02-07 20:34:19] 
+[2026-02-07 20:34:19] [173/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:34:49] [173/189] Sending to: brettcastromgmt@gmail.com
+[2026-02-07 20:34:49]   Playlist: in love 'n shit
+[2026-02-07 20:34:49]   Curator: russhitt (Andrea Russett)
+[2026-02-07 20:34:50]   ✓ Sent! Message ID: 19c3b1a129922469
+[2026-02-07 20:34:50] 
+[2026-02-07 20:34:50] [174/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:35:20] [174/189] Sending to: dreammusicprfirm@gmail.com
+[2026-02-07 20:35:20]   Playlist: Indie Friday // Indie Pop
+[2026-02-07 20:35:20]   Curator: The Indie Folx
+[2026-02-07 20:35:20]   ✓ Sent! Message ID: 19c3b1a887d48826
+[2026-02-07 20:35:20] 
+[2026-02-07 20:35:20] [175/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:35:50] [175/189] Sending to: info.rizingplaylists@mail.com
+[2026-02-07 20:35:50]   Playlist: Indie Rizing
+[2026-02-07 20:35:50]   Curator: Rizing Playlists
+[2026-02-07 20:35:51]   ✓ Sent! Message ID: 19c3b1afef30087d
+[2026-02-07 20:35:51] 
+[2026-02-07 20:35:51] [176/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:36:21] [176/189] Sending to: indieairsubmissions@gmail.com
+[2026-02-07 20:36:21]   Playlist: IndieAir Favorites :)
+[2026-02-07 20:36:21]   Curator: It Hurts, Sometimes
+[2026-02-07 20:36:21]   ✓ Sent! Message ID: 19c3b1b76ad06ede
+[2026-02-07 20:36:21] 
+[2026-02-07 20:36:21] [177/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:36:51] [177/189] Sending to: infotopplaylists@gmail.com
+[2026-02-07 20:36:51]   Playlist: N/A
+[2026-02-07 20:36:51]   Curator: N/A
+[2026-02-07 20:36:52]   ✓ Sent! Message ID: 19c3b1bedc0d787d
+[2026-02-07 20:36:52] 
+[2026-02-07 20:36:52] [178/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:37:22] [178/189] Sending to: infotopplaylists@gmail.com
+[2026-02-07 20:37:22]   Playlist: MÚSICA PARA CENAR
+[2026-02-07 20:37:22]   Curator: Top Playlists
+[2026-02-07 20:37:22]   ✓ Sent! Message ID: 19c3b1c64494b405
+[2026-02-07 20:37:22] 
+[2026-02-07 20:37:22] [179/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:37:52] [179/189] Sending to: louisthechild@gmail.com
+[2026-02-07 20:37:52]   Playlist: Louis The Child
+[2026-02-07 20:37:52]   Curator: 5,055 MICROHOUSE,
+[2026-02-07 20:37:53]   ✓ Sent! Message ID: 19c3b1cddeaa365b
+[2026-02-07 20:37:53] 
+[2026-02-07 20:37:53] [180/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:38:23] [180/189] Sending to: artistmeetexposure@gmail.com
+[2026-02-07 20:38:23]   Playlist: Pop Trending
+[2026-02-07 20:38:23]   Curator: Experience Music Group
+[2026-02-07 20:38:23]   ✓ Sent! Message ID: 19c3b1d52308bc1d
+[2026-02-07 20:38:23] 
+[2026-02-07 20:38:23] [181/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:38:53] [181/189] Sending to: wavemusicyt@gmail.com
+[2026-02-07 20:38:53]   Playlist: Rawest Rap
+[2026-02-07 20:38:53]   Curator: Trapstyle Records
+[2026-02-07 20:38:54]   ✓ Sent! Message ID: 19c3b1dca36e7195
+[2026-02-07 20:38:54] 
+[2026-02-07 20:38:54] [182/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:39:24] [182/189] Sending to: amron@authenticm.com
+[2026-02-07 20:39:24]   Playlist: Mario Buonocore
+[2026-02-07 20:39:24]   Curator: Mario Buonocore
+[2026-02-07 20:39:25]   ✓ Sent! Message ID: 19c3b1e434dbdce7
+[2026-02-07 20:39:25] 
+[2026-02-07 20:39:25] [183/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:39:55] [183/189] Sending to: andre@alltrapnation.com
+[2026-02-07 20:39:55]   Playlist: Summer Vibes
+[2026-02-07 20:39:55]   Curator: thedrunkencoconut
+[2026-02-07 20:39:55]   ✓ Sent! Message ID: 19c3b1ebb1e8e2cc
+[2026-02-07 20:39:55] 
+[2026-02-07 20:39:55] [184/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:40:25] [184/189] Sending to: info@deeprootrecords.com
+[2026-02-07 20:40:25]   Playlist: Sundown Sounds
+[2026-02-07 20:40:25]   Curator: Coachella
+[2026-02-07 20:40:26]   ✓ Sent! Message ID: 19c3b1f3082c536e
+[2026-02-07 20:40:26] 
+[2026-02-07 20:40:26] [185/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:40:56] [185/189] Sending to: arealperson@greatist.com
+[2026-02-07 20:40:56]   Playlist: Two Friends' Playground
+[2026-02-07 20:40:56]   Curator: The Two Friends
+[2026-02-07 20:40:56]   ✓ Sent! Message ID: 19c3b1fa8fc91a37
+[2026-02-07 20:40:56] 
+[2026-02-07 20:40:56] [186/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:41:26] [186/189] Sending to: communications@theorchard.com
+[2026-02-07 20:41:26]   Playlist: Arland Bay
+[2026-02-07 20:41:26]   Curator: Psych!
+[2026-02-07 20:41:26]   ✓ Sent! Message ID: 19c3b201e9e8eb4e
+[2026-02-07 20:41:26] 
+[2026-02-07 20:41:26] [187/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:41:56] [187/189] Sending to: ganjmedia@yahoo.com
+[2026-02-07 20:41:56]   Playlist: The Fresh Ten: Reggae
+[2026-02-07 20:41:56]   Curator: The Fresh Ten
+[2026-02-07 20:41:57]   ✓ Sent! Message ID: 19c3b20973fb50b5
+[2026-02-07 20:41:57] 
+[2026-02-07 20:41:57] [188/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:42:27] [188/189] Sending to: ted.ganung@vprecords.com
+[2026-02-07 20:42:27]   Playlist: Andrew Samoranos
+[2026-02-07 20:42:27]   Curator: HAWAIIAN, REGGAE, DANCEHALL, DUB
+[2026-02-07 20:42:28]   ✓ Sent! Message ID: 19c3b210f448ef18
+[2026-02-07 20:42:28] 
+[2026-02-07 20:42:28] [189/189] Waiting 30.0 seconds before next email...
+[2026-02-07 20:42:58] [189/189] Sending to: hello@vnyl.org
+[2026-02-07 20:42:58]   Playlist: What I'm Blasting - Chill Vibe
+[2026-02-07 20:42:58]   Curator: Ebtheceleb Tunes (Eb the Celeb)
+[2026-02-07 20:42:58]   ✓ Sent! Message ID: 19c3b21865026f40
+[2026-02-07 20:42:58] 
+[2026-02-07 20:42:58] 
+[2026-02-07 20:42:58] ============================================================
+[2026-02-07 20:42:58] CAMPAIGN SUMMARY
+[2026-02-07 20:42:58] ============================================================
+[2026-02-07 20:42:58] Total processed: 189
+[2026-02-07 20:42:58] Successfully sent: 189
+[2026-02-07 20:42:58] Failed: 0
+[2026-02-07 20:42:58] Daily count: 193/200
+[2026-02-07 20:42:58] Hourly count: 43/50
+[2026-02-07 20:42:58] 
+[2026-02-07 20:42:58] 
+[2026-02-07 20:42:58] Progress saved to: campaign_progress.json
+[2026-02-07 20:42:58] Run with --resume to continue from where you left off
+[2026-02-07 20:42:58] ============================================================

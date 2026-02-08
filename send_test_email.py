@@ -29,11 +29,11 @@ def load_config(config_file='config.yaml'):
 
 
 def main():
-    # Get recipient email from command line or use authenticated user's email
+    # Get recipient emails from command line or use default test emails
     if len(sys.argv) >= 2:
-        recipient_email = sys.argv[1]
+        recipient_emails = sys.argv[1].split(',')
     else:
-        recipient_email = None  # Will get from authenticated account
+        recipient_emails = ['laura.b.ramsay@gmail.com', 'cramsay3@gmail.com']
     
     print("=" * 60)
     print("Sending Test Email for #Partäy Playlist")
@@ -43,11 +43,13 @@ def main():
     # Load config
     config = load_config()
     artist_name = config.get('artist', {}).get('name', 'Charley Ramsay')
-    artist_spotify = config.get('artist', {}).get('spotify_link', 'https://open.spotify.com/artist/charleyramsay')
+    artist_spotify = config.get('artist', {}).get('spotify_link', 'https://open.spotify.com/artist/2s51Onhpd29JvOji1yuCKy?si=TVLfaQxOSz-qw6UQRraMkA')
     artist_instagram = config.get('artist', {}).get('instagram', 'cramsay3')
     artist_website = config.get('artist', {}).get('website', 'https://charleyramsay.com')
-    custom_message = config.get('email', {}).get('custom_message')
-    additional_info = config.get('email', {}).get('additional_info')
+    cc_email = config.get('email_settings', {}).get('cc_email', 'charley@ramsays.us')
+    # custom_message and additional_info removed - should be in template itself
+    custom_message = None
+    additional_info = None
     
     # Parse PDF to find #Partäy contact
     print("Step 1: Parsing playlist contacts...")
@@ -90,44 +92,58 @@ def main():
     # Show preview
     print("Email Preview:")
     print("-" * 60)
-    print(f"To: {recipient_email}")
+    print(f"To: {', '.join(recipient_emails)}")
+    print(f"CC: {cc_email}")
     print(f"Subject: {result['subject']}")
     print(f"Body preview (first 500 chars):")
     print(result['body'][:500] + "..." if len(result['body']) > 500 else result['body'])
     print("-" * 60)
     print()
     
-    # Send email
-    print("Step 3: Sending email...")
+    # Send emails to all recipients
+    print("Step 3: Sending emails...")
     try:
         gmail = GmailDraftCreator()
         gmail.authenticate()
         print("  ✓ Authenticated with Gmail API")
+        print(f"  ✓ CC on all emails: {cc_email}")
+        print()
         
-        # Get authenticated user's email if not provided
-        if not recipient_email:
-            profile = gmail.service.users().getProfile(userId='me').execute()
-            recipient_email = profile.get('emailAddress')
-            print(f"  ✓ Using authenticated account: {recipient_email}")
+        successful = []
+        failed = []
         
-        message_id = gmail.send_email(
-            to_email=recipient_email,
-            subject=result['subject'],
-            body=result['body']
-        )
+        for recipient_email in recipient_emails:
+            recipient_email = recipient_email.strip()
+            print(f"  Sending to: {recipient_email}...")
+            
+            message_id = gmail.send_email(
+                to_email=recipient_email,
+                subject=result['subject'],
+                body=result['body'],
+                cc_email=cc_email
+            )
+            
+            if message_id:
+                print(f"    ✓ Sent! Message ID: {message_id}")
+                successful.append({'email': recipient_email, 'message_id': message_id})
+            else:
+                print(f"    ✗ Failed to send")
+                failed.append({'email': recipient_email})
         
-        if message_id:
-            print(f"  ✓ Email sent successfully!")
-            print(f"  ✓ Message ID: {message_id}")
-            print()
-            print("=" * 60)
-            print("SUCCESS!")
-            print(f"Test email sent to: {recipient_email}")
-            print("Check your inbox (and spam folder) for the email.")
-            print("=" * 60)
-        else:
-            print("  ✗ Failed to send email")
-            sys.exit(1)
+        print()
+        print("=" * 60)
+        print("SUCCESS!")
+        print(f"Sent {len(successful)} test emails")
+        print(f"CC'd on all: {cc_email}")
+        print()
+        print("Recipients:")
+        for s in successful:
+            print(f"  ✓ {s['email']}")
+        if failed:
+            print("\nFailed:")
+            for f in failed:
+                print(f"  ✗ {f['email']}")
+        print("=" * 60)
             
     except Exception as e:
         print(f"  ✗ Error sending email: {e}")

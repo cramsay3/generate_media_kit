@@ -1,0 +1,12 @@
+# Email Blacklist - Addresses that have bounced
+# Generated from Gmail bounce messages
+# These addresses will be skipped in future campaigns
+
+amron@authenticm.com
+contact@smithmusic.com
+evan@summitlife.com
+info@ultrarecords.com
+info@xunemag.com
+jesper.borjesson@tv4.se
+press@isaacshepard.com
+submit@pressthemusic.com

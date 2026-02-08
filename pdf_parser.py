@@ -107,29 +107,58 @@ class PDFParser:
                             not re.match(r'^\d+[,\d]*\s*$', curator_candidate.replace(',', '').replace(' ', '')) and
                             curator_candidate not in ['Playlist Name', 'Curator', 'Genres', 'Followers', 'Best Way To Contact']):
                             
-                            # Check if it's not genres
-                            is_genre = any(indicator in curator_candidate.upper() for indicator in genre_indicators) and (',' in curator_candidate or len(curator_candidate) > 30)
+                            # Check if it's not genres - improved detection
+                            # Genres are usually ALL CAPS, have commas, or are common genre words
+                            curator_upper = curator_candidate.upper()
+                            is_genre = (
+                                (any(indicator in curator_upper for indicator in genre_indicators) and 
+                                 (',' in curator_candidate or len(curator_candidate) > 30)) or
+                                # Single word genre indicators (like REGGAE, ROCK, POP alone)
+                                (curator_upper in ['REGGAE', 'ROCK', 'POP', 'EDM', 'HIP HOP', 'RAP', 'METAL', 'PUNK', 'JAZZ', 'BLUES', 'FOLK', 'SOUL', 'COUNTRY', 'ELECTRONIC', 'HOUSE', 'TECHNO', 'TRANCE', 'DUBSTEP', 'INDIE', 'ALTERNATIVE', 'CHRISTIAN', 'GOSPEL']) or
+                                # All caps and short (likely genre)
+                                (curator_candidate.isupper() and len(curator_candidate) < 20 and ',' not in curator_candidate and any(indicator in curator_upper for indicator in genre_indicators))
+                            )
                             
                             if not is_genre:
                                 current_contact.curator = curator_candidate
                                 
                                 # Now find playlist name (before curator)
-                                for k in range(j - 1, max(0, j - 5), -1):
+                                # Look further back (up to 10 lines) to find the actual playlist name
+                                for k in range(j - 1, max(0, j - 10), -1):
                                     playlist_candidate = lines[k]
                                     if not playlist_candidate:  # Skip empty lines
                                         continue
                                     
-                                    if (len(playlist_candidate) < 100 and 
-                                        '@' not in playlist_candidate and 
-                                        'spotify' not in playlist_candidate.lower() and
-                                        not playlist_candidate.startswith('http') and
-                                        not re.match(r'^\d+[,\d]*\s*$', playlist_candidate.replace(',', '').replace(' ', '')) and
-                                        playlist_candidate not in ['Playlist Name', 'Curator', 'Genres', 'Followers', 'Best Way To Contact']):
-                                        
-                                        is_genre = any(indicator in playlist_candidate.upper() for indicator in genre_indicators) and (',' in playlist_candidate or len(playlist_candidate) > 30)
-                                        if not is_genre:
-                                            current_contact.playlist_name = playlist_candidate
-                                            break
+                                    # Skip URLs (http/https/instagram/spotify) - check anywhere in the line
+                                    candidate_lower = playlist_candidate.lower()
+                                    if ('http' in candidate_lower or 
+                                        'instagram.com' in candidate_lower or
+                                        'spotify.com' in candidate_lower or
+                                        'www.' in candidate_lower):
+                                        continue
+                                    
+                                    # Skip if it contains @ (email) or is a number (followers)
+                                    if ('@' in playlist_candidate or 
+                                        re.match(r'^\d+[,\d]*\s*$', playlist_candidate.replace(',', '').replace(' ', ''))):
+                                        continue
+                                    
+                                    # Skip header labels
+                                    if playlist_candidate in ['Playlist Name', 'Curator', 'Genres', 'Followers', 'Best Way To Contact']:
+                                        continue
+                                    
+                                    # Check if it's genres (usually have commas and genre keywords, or are very long)
+                                    is_genre = (
+                                        (any(indicator in playlist_candidate.upper() for indicator in genre_indicators) and 
+                                         (',' in playlist_candidate or len(playlist_candidate) > 30)) or
+                                        # Single word genre indicators
+                                        (playlist_candidate.upper() in ['REGGAE', 'ROCK', 'POP', 'EDM', 'HIP HOP', 'RAP', 'METAL', 'PUNK', 'JAZZ', 'BLUES', 'FOLK', 'SOUL', 'COUNTRY', 'ELECTRONIC', 'HOUSE', 'TECHNO', 'TRANCE', 'DUBSTEP', 'INDIE', 'ALTERNATIVE', 'CHRISTIAN', 'GOSPEL', 'AMBIENT']) or
+                                        # All caps and short (likely genre)
+                                        (playlist_candidate.isupper() and len(playlist_candidate) < 20 and ',' not in playlist_candidate and any(indicator in playlist_candidate.upper() for indicator in genre_indicators))
+                                    )
+                                    
+                                    if not is_genre and len(playlist_candidate) < 100:
+                                        current_contact.playlist_name = playlist_candidate
+                                        break
                                 break
                 
                 pending_data = {}
@@ -152,6 +181,31 @@ class PDFParser:
                         if not current_contact.other_links:
                             current_contact.other_links = []
                         current_contact.other_links.append(line)
+                    
+                    # Check if playlist name comes AFTER Spotify URL (look forward 1-2 lines)
+                    if not current_contact.playlist_name:
+                        for look_ahead in range(1, 3):
+                            if i + look_ahead < len(lines):
+                                next_line = lines[i + look_ahead].strip()
+                                if (next_line and 
+                                    len(next_line) < 100 and 
+                                    '@' not in next_line and 
+                                    'http' not in next_line.lower() and
+                                    'instagram.com' not in next_line.lower() and
+                                    'spotify.com' not in next_line.lower() and
+                                    'www.' not in next_line.lower() and
+                                    not re.match(r'^\d+[,\d]*\s*$', next_line.replace(',', '').replace(' ', '')) and
+                                    next_line not in ['Playlist Name', 'Curator', 'Genres', 'Followers', 'Best Way To Contact']):
+                                    # Check if it's not genres
+                                    is_genre = (
+                                        (any(indicator in next_line.upper() for indicator in genre_indicators) and 
+                                         (',' in next_line or len(next_line) > 30)) or
+                                        (next_line.upper() in ['REGGAE', 'ROCK', 'POP', 'EDM', 'HIP HOP', 'RAP', 'METAL', 'PUNK', 'JAZZ', 'BLUES', 'FOLK', 'SOUL', 'COUNTRY', 'ELECTRONIC', 'HOUSE', 'TECHNO', 'TRANCE', 'DUBSTEP', 'INDIE', 'ALTERNATIVE', 'CHRISTIAN', 'GOSPEL', 'AMBIENT']) or
+                                        (next_line.isupper() and len(next_line) < 20 and ',' not in next_line and any(indicator in next_line.upper() for indicator in genre_indicators))
+                                    )
+                                    if not is_genre:
+                                        current_contact.playlist_name = next_line
+                                        break
                 else:
                     # Store for when we find the email
                     pending_data['spotify_url'] = line
@@ -244,7 +298,9 @@ class PDFParser:
                                     len(playlist_line) < 100 and 
                                     '@' not in playlist_line and 
                                     'spotify' not in playlist_line.lower() and
-                                    not playlist_line.startswith('http') and
+                                    'http' not in playlist_line.lower() and
+                                    'instagram.com' not in playlist_line.lower() and
+                                    'www.' not in playlist_line.lower() and
                                     not re.match(r'^\d+[,\d]*\s*$', playlist_line.replace(',', '').replace(' ', '')) and
                                     not any(indicator in playlist_line.upper() for indicator in genre_indicators) and
                                     playlist_line not in ['Playlist Name', 'Curator', 'Genres', 'Followers', 'Best Way To Contact']):
