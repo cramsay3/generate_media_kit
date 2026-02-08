@@ -5,6 +5,7 @@ playlist_contacts.txt
 *.jpeg
 *.png
 *.kra
+*.pdf
 _Media_Kit/
 __pycache__/
 *.pyc
@@ -14,8 +15,21 @@ __pycache__/
 *.log
 campaign_output.txt
 instagram_follow.log
+instagram_engagement.log
 *.json.bak
 
 # Progress tracking files (can be large)
 campaign_progress.json
 instagram_progress.json
+instagram_engagement_progress.json
+
+# CSV files with lots of data
+*.csv
+
+# Session files
+instagram_session.json
+token.json
+credentials.json
+
+# Large text files
+email_blacklist.txt
