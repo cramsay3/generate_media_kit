@@ -248,7 +248,7 @@ def main():
     if not args.dry_run:
         try:
             from instagrapi import Client
-            from instagrapi.exceptions import LoginRequired, PleaseWaitFewMinutes, ChallengeRequired, BadCredentials
+            from instagrapi.exceptions import LoginRequired, PleaseWaitFewMinutes, ChallengeRequired, BadCredentials, TwoFactorRequired
         except ImportError:
             log_message("ERROR: instagrapi library not installed.", log_file)
             log_message("Install it with: pip install instagrapi", log_file)
@@ -280,6 +280,30 @@ def main():
             # Save session for next time
             cl.dump_settings(session_file)
             log_message("✓ Successfully logged in and session saved", log_file)
+        except TwoFactorRequired as e:
+            log_message(f"2FA Required: {e}", log_file)
+            log_message("", log_file)
+            log_message("Your account has 2FA enabled. Enter your verification code.", log_file)
+            log_message("Check your authenticator app or email for the code.", log_file)
+            
+            try:
+                verification_code = input("Enter your 2FA code: ").strip()
+                if verification_code:
+                    log_message("Logging in with 2FA code...", log_file)
+                    cl.login(username, password, verification_code=verification_code)
+                    cl.dump_settings(session_file)
+                    log_message("✓ Successfully logged in with 2FA and session saved", log_file)
+                else:
+                    log_message("No verification code provided. Exiting.", log_file)
+                    return
+            except Exception as twofa_error:
+                log_message(f"Failed to login with 2FA: {twofa_error}", log_file)
+                log_message("", log_file)
+                log_message("SOLUTIONS:", log_file)
+                log_message("1. Make sure the code is correct (6 digits from authenticator app)", log_file)
+                log_message("2. Codes expire quickly - enter it immediately", log_file)
+                log_message("3. Or temporarily disable 2FA in Instagram settings", log_file)
+                return
         except ChallengeRequired as e:
             log_message(f"2FA Challenge Required: {e}", log_file)
             log_message("", log_file)
