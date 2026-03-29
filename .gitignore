@@ -15,3 +15,8 @@ build/
 *.log
 test_email.html
 *.zip
+
+# Large design assets (multi‑MB images / working files)
+_Media_Kit/
+/DSC_*.jpeg
+*.kra
