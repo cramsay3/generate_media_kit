@@ -1,3 +1,4 @@
+*zip
 .env
 token.json
 credentials.json
@@ -20,3 +21,7 @@ test_email.html
 _Media_Kit/
 /DSC_*.jpeg
 *.kra
+
+# Generated output and raw source images
+output/
+sources/
