@@ -1,0 +1,6 @@
+playlist_name,description,public,num_tracks,user_song_uri,user_song_position
+"Americana Vibes","Curated Americana tracks for your listening pleasure",true,30,,
+"Road Trip Mix","Perfect for long drives through the countryside",true,25,spotify:track:2oSf87Lb4R5BrvN5n7IJKG,5
+"Sunday Morning Coffee","Relaxing Americana for your morning routine",true,20,,
+"Campfire Songs","Acoustic Americana perfect for around the fire",false,35,,
+"Work From Home","Background Americana to keep you focused",true,30,spotify:track:2oSf87Lb4R5BrvN5n7IJKG,

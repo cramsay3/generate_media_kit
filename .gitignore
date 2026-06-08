@@ -1,6 +1,7 @@
 *zip
 .env
 token.json
+spotify_token.json
 credentials.json
 instagram_session.json
 __pycache__/

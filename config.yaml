@@ -75,3 +75,44 @@ instagram_engagement:
   max_comments_per_hour: 10  # Maximum comments per hour (very conservative!)
   max_likes_per_day: 150     # Maximum likes per day
   max_comments_per_day: 50   # Maximum comments per day
+
+# Spotify playlist creation settings
+spotify:
+  # Similar artists to include in playlists (Americana/alt-country)
+  similar_artists:
+    - "Jason Isbell"
+    - "Sturgill Simpson"
+    - "Chris Stapleton"
+    - "John Moreland"
+    - "Margo Price"
+    - "Steve Earle"
+    - "Turnpike Troubadours"
+    - "Tyler Childers"
+    - "Gillian Welch"
+    - "Townes Van Zandt"
+    - "Patty Griffin"
+    - "Kaleo"
+    - "The Avett Brothers"
+    - "Brent Cobb"
+    - "Ray LaMontagne"
+    - "Lukestar"
+    - "The Dead South"
+    - "Nathaniel Rateliff & The Night Sweats"
+    - "Hurray for the Riff Raff"
+    - "Bonnie Raitt"
+  
+  # User's songs to include (Spotify URIs)
+  user_songs:
+    - "spotify:track:2oSf87Lb4R5BrvN5n7IJKG"  # Bottle Rocket Sunsets
+    - "spotify:track:0yvQQlRknnAk4lXVPCy8am"  # Heart, Boots and Soul
+    # Add more track URIs here
+  
+  # Default playlist settings
+  default_num_tracks: 30
+  default_public: true
+  
+  # Rate limiting (conservative to avoid detection)
+  min_delay_seconds: 5
+  max_delay_seconds: 10
+  max_per_hour: 10
+  max_per_day: 50

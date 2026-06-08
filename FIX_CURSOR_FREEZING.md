@@ -94,3 +94,29 @@ df -h
 # View Cursor processes
 ps aux | grep cursor
 ```
+
+## Sandboxing Error Fix
+
+If you see this error after updating Cursor:
+```
+Failed to move to new namespace: PID namespaces supported, Network namespace supported, but failed: errno = Operation not permitted
+[FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:207] Check failed
+```
+
+**Solution:** Use the wrapper script to launch Cursor with `--no-sandbox`:
+
+```bash
+# Launch Cursor using the wrapper script
+/home/ubuntu/apps/launch_cursor.sh
+
+# Or create a desktop shortcut:
+# Edit ~/.local/share/applications/cursor.desktop (if it exists)
+# Or create a new one with Exec=/home/ubuntu/apps/launch_cursor.sh
+```
+
+**Alternative:** Launch directly with the flag:
+```bash
+/home/ubuntu/apps/cursor-latest.AppImage --no-sandbox
+```
+
+**Note:** The `--no-sandbox` flag disables Chromium's sandboxing, which is less secure but necessary for AppImages on some Linux systems. This is a common workaround for Electron-based apps.

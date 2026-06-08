@@ -255,6 +255,19 @@ def main():
             return
         
         cl = Client()
+        # Configure to avoid detection
+        cl.delay_range = [1, 3]  # Random delays between 1-3 seconds
+        # Try to use device settings that look more like a real browser
+        try:
+            # Load device settings if they exist
+            device_file = 'instagram_device.json'
+            if Path(device_file).exists():
+                with open(device_file, 'r') as f:
+                    device_settings = json.load(f)
+                    cl.set_device(device_settings)
+        except:
+            pass  # Use default device settings
+        
         session_file = 'instagram_session.json'
         
         # Try to load existing session first
@@ -284,25 +297,42 @@ def main():
             log_message(f"2FA Required: {e}", log_file)
             log_message("", log_file)
             log_message("Your account has 2FA enabled. Enter your verification code.", log_file)
-            log_message("Check your authenticator app or email for the code.", log_file)
+            log_message("Check your authenticator app for the 6-digit code.", log_file)
             
             try:
+                # Get code from user
                 verification_code = input("Enter your 2FA code: ").strip()
-                if verification_code:
-                    log_message("Logging in with 2FA code...", log_file)
-                    cl.login(username, password, verification_code=verification_code)
+                
+                if not verification_code:
+                    log_message("No verification code provided. Exiting.", log_file)
+                    return
+                
+                log_message(f"Attempting login with 2FA code...", log_file)
+                
+                # CRITICAL: Must use the SAME client instance that raised TwoFactorRequired
+                # Pass verification_code as keyword argument
+                result = cl.login(username, password, verification_code=verification_code)
+                
+                if result:
                     cl.dump_settings(session_file)
                     log_message("✓ Successfully logged in with 2FA and session saved", log_file)
                 else:
-                    log_message("No verification code provided. Exiting.", log_file)
+                    log_message("✗ Login returned False - check credentials", log_file)
                     return
+                    
+            except TwoFactorRequired as e2:
+                log_message(f"✗ Still requires 2FA - code may be wrong or expired: {e2}", log_file)
+                log_message("Get a fresh code from your authenticator app and try again", log_file)
+                return
             except Exception as twofa_error:
-                log_message(f"Failed to login with 2FA: {twofa_error}", log_file)
+                log_message(f"✗ Failed to login with 2FA: {type(twofa_error).__name__}", log_file)
+                log_message(f"Error details: {twofa_error}", log_file)
                 log_message("", log_file)
-                log_message("SOLUTIONS:", log_file)
-                log_message("1. Make sure the code is correct (6 digits from authenticator app)", log_file)
-                log_message("2. Codes expire quickly - enter it immediately", log_file)
-                log_message("3. Or temporarily disable 2FA in Instagram settings", log_file)
+                log_message("TROUBLESHOOTING:", log_file)
+                log_message("1. Make sure code is fresh (from authenticator app, not email)", log_file)
+                log_message("2. Codes expire in 30 seconds - enter immediately", log_file)
+                log_message("3. Try disabling 2FA temporarily in Instagram settings", log_file)
+                log_message("4. Or use test_ig_login.py to debug the exact error", log_file)
                 return
         except ChallengeRequired as e:
             log_message(f"2FA Challenge Required: {e}", log_file)

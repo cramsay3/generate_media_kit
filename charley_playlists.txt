@@ -1,0 +1,795 @@
+============================================================
+FINDING PLAYLISTS WITH CHARLEY RAMSAY TRACKS
+============================================================
+
+  ✓ Using cached Spotify token
+  ✓ Authenticated as: cramsay3 (cramsay3)
+1. Getting Charley Ramsay artist info...
+   ✓ Found: Charley Ramsay (ID: 2s51Onhpd29JvOji1yuCKy)
+
+2. Getting all tracks...
+   ✓ Found 35 unique tracks
+
+3. Checking your own playlists...
+   ✓ Found 153 of your playlists
+   Checking: Indie Modern Alternative Rock...   (none)
+   Checking: Indie Glam Rock...   (none)
+   Checking: Indie Nu Metal...   (none)
+   Checking: Indie Alternative Metal...   (none)
+   Checking: Indie Grunge...   (none)
+   Checking: Indie Alternative Rock...   (none)
+   Checking: Indie Funk Metal...   (none)
+   Checking: Indie Funk Rock...   (none)
+   Checking: Indie Hard Rock...   (none)
+   Checking: Indie Blues Rock...   (none)
+   Checking: Indie Progressive Rock...   (none)
+   Checking: Indie Symphonic Rock...   (none)
+   Checking: Indie Flute Rock...   (none)
+   Checking: Indie Garage Rock...   (none)
+   Checking: Indie Sheffield Indie...   (none)
+   Checking: Indie Modern Rock...   (none)
+   Checking: Indie New Wave Pop...   (none)
+   Checking: Indie New Wave...   (none)
+   Checking: Indie Permanent Wave...   (none)
+   Checking: Indie Power Pop...   (none)
+   Checking: Indie Neo-psychedelic...   (none)
+   Checking: Indie Art Pop...   (none)
+   Checking: Indie Noise Pop...   (none)
+   Checking: Indie Indie Rock...   (none)
+   Checking: Indie Chamber Pop...   (none)
+   Checking: Indie Philly Indie...   (none)
+   Checking: Indie Modern Folk Rock...   (none)
+   Checking: Indie Album Rock...   (none)
+   Checking: Indie Singer-songwriter...   (none)
+   Checking: Indie Folk Rock...   (none)
+   Checking: Indie British Invasion...   (none)
+   Checking: Indie Protopunk...   (none)
+   Checking: Indie Classic Rock...   (none)
+   Checking: Indie Rock...   (none)
+   Checking: Indie Art Rock...   (none)
+   Checking: Indie Psychedelic Rock...   (none)
+   Checking: Indie Scottish Fiddle... ✓ Found 1 tracks
+   Checking: Indie Shoegaze... ✓ Found 1 tracks
+   Checking: Indie Modern Power Pop... ✓ Found 1 tracks
+   Checking: Indie Scottish Rock... ✓ Found 1 tracks
+   Checking: Indie Scottish Indie... ✓ Found 1 tracks
+   Checking: Indie Sheffield Indie... ✓ Found 1 tracks
+   Checking: Indie Solo Wave... ✓ Found 1 tracks
+   Checking: Indie Jangle Pop... ✓ Found 1 tracks
+   Checking: Indie Canadian Pop... ✓ Found 1 tracks
+   Checking: Indie Piano Rock... ✓ Found 1 tracks
+   Checking: Indie Kingston On Indie... ✓ Found 1 tracks
+   Checking: Indie Canadian Country... ✓ Found 1 tracks
+   Checking: Indie Ottawa Indie... ✓ Found 1 tracks
+   Checking: Indie Power Pop... ✓ Found 1 tracks
+   Checking: Indie Austin Americana... ✓ Found 1 tracks
+   Checking: Indie North Carolina Indie... ✓ Found 1 tracks
+   Checking: Indie Nashville Americana... ✓ Found 1 tracks
+   Checking: Indie Jam Band... ✓ Found 1 tracks
+   Checking: Indie Progressive Bluegrass... ✓ Found 1 tracks
+   Checking: Indie Rhode Island Indie... ✓ Found 1 tracks
+   Checking: Indie Melbourne Punk... ✓ Found 1 tracks
+   Checking: Indie Stomp And Flutter... ✓ Found 1 tracks
+   Checking: Indie North Carolina Roots... ✓ Found 1 tracks
+   Checking: Indie Folk-pop... ✓ Found 1 tracks
+   Checking: Indie Quebec Indie... ✓ Found 1 tracks
+   Checking: Indie Chicago Indie... ✓ Found 1 tracks
+   Checking: Indie Bay Area Indie... ✓ Found 1 tracks
+   Checking: Indie Oakland Indie... ✓ Found 1 tracks
+   Checking: Indie Alternative Rock... ✓ Found 1 tracks
+   Checking: Indie Korean Underground Rap... ✓ Found 1 tracks
+   Checking: Indie Noise Pop... ✓ Found 1 tracks
+   Checking: Indie Elephant 6... ✓ Found 1 tracks
+   Checking: Indie Washington Indie... ✓ Found 1 tracks
+   Checking: Indie Lilith... ✓ Found 1 tracks
+   Checking: Indie La Indie... ✓ Found 1 tracks
+   Checking: Indie Indietronica... ✓ Found 1 tracks
+   Checking: Indie Folk Punk... ✓ Found 1 tracks
+   Checking: Indie New Weird America... ✓ Found 1 tracks
+   Checking: Indie Lo-fi... ✓ Found 1 tracks
+   Checking: Indie Anti-folk... ✓ Found 1 tracks
+   Checking: Indie Austindie... ✓ Found 1 tracks
+   Checking: Indie Modern Rock... ✓ Found 1 tracks
+   Checking: Indie Seattle Indie... ✓ Found 1 tracks
+   Checking: Indie Alt Pop... ✓ Found 1 tracks
+   Checking: Indie Portland Indie... ✓ Found 1 tracks
+   Checking: Indie Albuquerque Indie... ✓ Found 1 tracks
+   Checking: Indie Vancouver Indie... ✓ Found 1 tracks
+   Checking: Indie Omaha Indie... ✓ Found 1 tracks
+   Checking: Indie Singer-songwriter... ✓ Found 1 tracks
+   Checking: Indie British Folk... ✓ Found 1 tracks
+   Checking: Indie Folk... ✓ Found 1 tracks
+   Checking: Indie Texas Blues... ✓ Found 1 tracks
+   Checking: Indie Heartland Rock... ✓ Found 1 tracks
+   Checking: Indie Acoustic Blues... ✓ Found 1 tracks
+   Checking: Indie New England Americana... ✓ Found 1 tracks
+   Checking: Indie Ectofolk... ✓ Found 1 tracks
+   Checking: Indie Contemporary Folk... ✓ Found 1 tracks
+   Checking: Indie Southern Rock... ✓ Found 1 tracks
+   Checking: Indie Blues Rock... ✓ Found 1 tracks
+   Checking: Indie Classic Canadian Rock... ✓ Found 1 tracks
+   Checking: Indie Electric Blues... ✓ Found 1 tracks
+   Checking: Indie Modern Blues... ✓ Found 1 tracks
+   Checking: Indie Alternative Roots Rock... ✓ Found 1 tracks
+   Checking: Indie Alternative Country... ✓ Found 1 tracks
+   Checking: Indie Pastoral... ✓ Found 1 tracks
+   Checking: Indie Canadian Americana... ✓ Found 1 tracks
+   Checking: Indie Ambient Country... ✓ Found 1 tracks
+   Checking: Indie Pub Rock... ✓ Found 1 tracks
+   Checking: Indie Ecm-style Jazz... ✓ Found 1 tracks
+   Checking: Indie Contemporary Post-bop... ✓ Found 1 tracks
+   Checking: Indie Belgian Rock... ✓ Found 1 tracks
+   Checking: Indie Belgian Jazz... ✓ Found 1 tracks
+   Checking: Indie Belgian Modern Jazz... ✓ Found 1 tracks
+   Checking: Indie Jazz... ✓ Found 1 tracks
+   Checking: Indie Contemporary Jazz... ✓ Found 1 tracks
+   Checking: Indie Country Blues... ✓ Found 1 tracks
+   Checking: Indie Belgian Indie... ✓ Found 1 tracks
+   Checking: Indie Belgian Pop... ✓ Found 1 tracks
+   Checking: Indie Ghent Indie... ✓ Found 1 tracks
+   Checking: Indie Australian Blues... ✓ Found 1 tracks
+   Checking: Indie Mellow Gold... ✓ Found 1 tracks
+   Checking: Indie Rock... ✓ Found 1 tracks
+   Checking: Indie Classic Rock... ✓ Found 1 tracks
+   Checking: Indie Acoustic Pop... ✓ Found 1 tracks
+   Checking: Indie British Singer-songwriter... ✓ Found 1 tracks
+   Checking: Indie Melancholia... ✓ Found 1 tracks
+   Checking: Indie Canadian Indie... ✓ Found 1 tracks
+   Checking: Indie Canadian Singer-songwriter... ✓ Found 1 tracks
+   Checking: Indie Ontario Indie... ✓ Found 1 tracks
+   Checking: Indie New Americana... ✓ Found 1 tracks
+   Checking: Indie Indie Folk... ✓ Found 1 tracks
+   Checking: Indie Stomp And Holler... ✓ Found 1 tracks
+   Checking: Indie Indie Rock... ✓ Found 1 tracks
+   Checking: Indie Modern Folk Rock... ✓ Found 1 tracks
+   Checking: Indie Baroque Pop... ✓ Found 1 tracks
+   Checking: Indie Chamber Pop... ✓ Found 1 tracks
+   Checking: Indie Roots Rock... ✓ Found 1 tracks
+   Checking: Indie Stomp And Holler...   (none)
+   Checking: Indie Indie Rock... ✓ Found 1 tracks
+   Checking: Indie Modern Folk Rock... ✓ Found 1 tracks
+   Checking: Indie Baroque Pop... ✓ Found 1 tracks
+   Checking: Indie Chamber Pop... ✓ Found 1 tracks
+   Checking: Indie Roots Rock... ✓ Found 1 tracks
+   Checking: Ramsay Acoustic...   (none)
+   Checking: My Peloton Music by zeitgeist404...   (none)
+   Checking: My Peloton Music by Patwik678...   (none)
+   Checking: Mumford and friends...   (none)
+   Checking: kids...   (none)
+   Checking: Starred...   (none)
+   Checking: MTB2014JULYv2...   (none)
+   Checking: listen...   (none)
+   Checking: Liked from Radio...   (none)
+   Checking: Writing...   (none)
+   Checking: Mom...   (none)
+   Checking: Classical...   (none)
+   Checking: Indie Folk lite Mumford & Sons typ.....   (none)
+   Checking: Christmas...   (none)
+
+4. Searching public playlists for your tracks...
+   (Checking top tracks only to avoid rate limits)
+   Searching for: Heart, Boots and Soul...   (none)
+   Searching for: Somebody Somewhere...   (none)
+   Searching for: Goldfish...   (none)
+   Searching for: Our Last Days Together...   (none)
+   Searching for: Bottle Rocket Sunsets...   (none)
+
+============================================================
+RESULTS
+============================================================
+
+Found 102 playlists containing your tracks:
+
+1. Indie Scottish Fiddle
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/4BVwaXFOtM9jMyvO52SJ98
+
+2. Indie Shoegaze
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/5Rx0v6Zi4o9yr5W2V5wcOH
+
+3. Indie Modern Power Pop
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/4pUdUFAyktL9zqQOSG2Mzn
+
+4. Indie Scottish Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/5gXt2UsWevRIfIdpMw0w2X
+
+5. Indie Scottish Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/1ioa8gMdQpoChXj0Mx9jrP
+
+6. Indie Sheffield Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/2vDw6VUzOGHpD38eLmHJW9
+
+7. Indie Solo Wave
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/5rSs5H9CZyf0Oo5sRsva0g
+
+8. Indie Jangle Pop
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/2UYYCaLhZjdCjl3pW3vUCA
+
+9. Indie Canadian Pop
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/3OxuRVVR6webJTZoQ0V6rN
+
+10. Indie Piano Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/7kHeYcdFUh7XLc2bqAk1iF
+
+11. Indie Kingston On Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/508KlmbXXnmlMqVWcmkWyU
+
+12. Indie Canadian Country
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/3yXiA6U0IBwPfaM3ZclrZ4
+
+13. Indie Ottawa Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/1GJCLasKG1VOgl5JvlsncD
+
+14. Indie Power Pop
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/0u4o9E0PUaEWmCcUkSwTNb
+
+15. Indie Austin Americana
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/3dFvtdtfzGZp7unIMoWBIz
+
+16. Indie North Carolina Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/64g4x1WgJ85ZjDdqVAmqkb
+
+17. Indie Nashville Americana
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/2QBxsEoOOzCF5sgIlwW3so
+
+18. Indie Jam Band
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/2ZTGUOZwSubggqeyvplKcG
+
+19. Indie Progressive Bluegrass
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/4DLJGzSPjzozGnXk4JiPsj
+
+20. Indie Rhode Island Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/1Vaj3FUAphrBshv7JKvjz1
+
+21. Indie Melbourne Punk
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/0ZH1z1BVKuuHvi0r7jhz36
+
+22. Indie Stomp And Flutter
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/3nVror7zHe18r9ne60opzc
+
+23. Indie North Carolina Roots
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/5OHQLBjoR8W8HSRFTIgD5L
+
+24. Indie Folk-pop
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/4lZR7N5csORKwvSDfIhLXU
+
+25. Indie Quebec Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/4Uwhi9eGYrjzhRi2QwIlXG
+
+26. Indie Chicago Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/6pfADUAUJvokTwyfx2YKT4
+
+27. Indie Bay Area Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/2qdAUxYt00HoSwOukyRXRb
+
+28. Indie Oakland Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/7wHeIgwnrzRmSQ9CwIr3xK
+
+29. Indie Alternative Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/72DS03DA1OeZ4UAAFsJl5Z
+
+30. Indie Korean Underground Rap
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/6WcOQ0JpWRQMr4L2K9WPxj
+
+31. Indie Noise Pop
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/1peDO94b7EdUgPdE0fJgaQ
+
+32. Indie Elephant 6
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/3Nxjhmm783euSkgurDDQ5J
+
+33. Indie Washington Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/0OwnFtmpKz3fXhTcuZnhFs
+
+34. Indie Lilith
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/6X27Z17k2sNdBaZYOwqBUr
+
+35. Indie La Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/2Cz4KP5LM7uhXLk4Nu4st3
+
+36. Indie Indietronica
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/3zOZ3XoiMTGLejUoru2gm2
+
+37. Indie Folk Punk
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/5ynqlXKkFyURYxQKn9FI5c
+
+38. Indie New Weird America
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/7k64LkaF4TrC30YFN5uvea
+
+39. Indie Lo-fi
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/2OCWWJd1mXqMY9d8UoV2e3
+
+40. Indie Anti-folk
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/7FDX60UoBsRshML6Evs5Lp
+
+41. Indie Austindie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/2roDYJyvqDYpfvYFk0MojZ
+
+42. Indie Modern Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/4E9D3g5MCCP1lZhaTya6pr
+
+43. Indie Seattle Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/1JAeP48l6Ed6DtlQb0WH6D
+
+44. Indie Alt Pop
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/3f6u97QcYa05KyRrUdVJE1
+
+45. Indie Portland Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/1JqjTrLzt1O26Cju8d4hAH
+
+46. Indie Albuquerque Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/5bXtfVd8qzVEUavVreOa7v
+
+47. Indie Vancouver Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/7FbPJLHt1WeL0hLe1aHjUc
+
+48. Indie Omaha Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/0jhoRQXInx1RAagELQwzN2
+
+49. Indie Singer-songwriter
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/6Slq6OAwxjcL4ySm3mgjIS
+
+50. Indie British Folk
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/32nPHkjUHZeigJq0osalgI
+
+51. Indie Folk
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/62PutkfLRFxcsiMxeFZUgB
+
+52. Indie Texas Blues
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/1vDrY9eEgPnn57iihmtmhX
+
+53. Indie Heartland Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/5ZCTZvsTuBOggXow5Ko2lH
+
+54. Indie Acoustic Blues
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/4aQHoMx8JGM6whnbwsP2zY
+
+55. Indie New England Americana
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/0aZQEo8RGgJBWlHk5aqy9C
+
+56. Indie Ectofolk
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/55XqmM2bH27YbPrrZzMGnS
+
+57. Indie Contemporary Folk
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/4U3RdChG2QhbhjlPylgyrh
+
+58. Indie Southern Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/38kq1LWS85SDM4In153BAn
+
+59. Indie Blues Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/1HOTQbJ3vCDN79fKV1Ru2K
+
+60. Indie Classic Canadian Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/2JTUm4Cbr7SjruopGa3IeH
+
+61. Indie Electric Blues
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/7mGUCP6mZLs3BfHthNBynl
+
+62. Indie Modern Blues
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/1O0Ip9cSGTtMYIweMKaKfC
+
+63. Indie Alternative Roots Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/69ghLpnsxfcSySnaXTAiWo
+
+64. Indie Alternative Country
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/1Rk4GmfDnK9kUDAS4lLzz0
+
+65. Indie Pastoral
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/6hhIdKqhzTW4yhGU605OVt
+
+66. Indie Canadian Americana
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/3UzB0Q2U4oOl8h22IEpOOg
+
+67. Indie Ambient Country
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/2YvlNYNqbImHD0OzhhzeuA
+
+68. Indie Pub Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/7yq8McftfDBg0UoQO7YG9h
+
+69. Indie Ecm-style Jazz
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/7x6NcHG9cnIvNUA8RhDN5k
+
+70. Indie Contemporary Post-bop
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/3mg2qJPRGRBgGIBkewr2Bg
+
+71. Indie Belgian Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/0i5DmAJtKcgRLi0IotluWb
+
+72. Indie Belgian Jazz
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/3kRUkJOUzO7ChWUSxer5vP
+
+73. Indie Belgian Modern Jazz
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/074kAf8vp5htNbPzzRXf6x
+
+74. Indie Jazz
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/53mf1PvgVoQUOdAKh11uAB
+
+75. Indie Contemporary Jazz
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/0d6cDliC3LzNmam4KM4f2P
+
+76. Indie Country Blues
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/2s9faOxIkWFlPNiRiBqpW0
+
+77. Indie Belgian Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/7AlDZipdLGog3J8nex6qe8
+
+78. Indie Belgian Pop
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/7Ix0creqHVQhSc7jb3SOre
+
+79. Indie Ghent Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/3KG5hb87WI7VMfWYCPURRv
+
+80. Indie Australian Blues
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/4xZR2P6zBpWcx6Id8J2JGV
+
+81. Indie Mellow Gold
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/0xOx9kEX5AP6ihFPylqRPm
+
+82. Indie Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/6SLyFkFxamegfyctJCGwqA
+
+83. Indie Classic Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/0KG7ow7s95DVc4390Tx2rL
+
+84. Indie Acoustic Pop
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/1tBD71p6bizEaDBQwQNXvG
+
+85. Indie British Singer-songwriter
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/7iSyVpaXZf0RpnKcHajXFR
+
+86. Indie Melancholia
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/1biWnoJKNTledvrVydQm87
+
+87. Indie Canadian Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/4Hd44INfQBn7PBzmOLWTrq
+
+88. Indie Canadian Singer-songwriter
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/5PqmA2WdT1eHUEqfUPObjh
+
+89. Indie Ontario Indie
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/5KNLOSk7ydZBqObS6dfiBp
+
+90. Indie New Americana
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/7iwZHXSBKmlCq4ZSNAtre5
+
+91. Indie Indie Folk
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/3SlshzBSpQW4Fl91VVTppF
+
+92. Indie Stomp And Holler
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/5XHyRltdQYpIycyydAZDNC
+
+93. Indie Indie Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/7jOhIcjE8Bc86munQ8fluX
+
+94. Indie Modern Folk Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/2EeHx4VUAmfo0OhP6jfnSk
+
+95. Indie Baroque Pop
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/79YUdKUHGjKPq9X6hQJx6b
+
+96. Indie Chamber Pop
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/2DZBt9Y16HBPMPfIO2N7hH
+
+97. Indie Roots Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/4qd7IXssR8zWhahoPbb7SR
+
+98. Indie Indie Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/2PZZLYt8TpwloftzALjSKO
+
+99. Indie Modern Folk Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/5YChjJ7ZvsDbzH5f5UEUuF
+
+100. Indie Baroque Pop
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/5YuyHCzGWUSJ7rk0iuUPde
+
+101. Indie Chamber Pop
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/0pky5pkRzigGsTOxseeaiY
+
+102. Indie Roots Rock
+   Owner: cramsay3
+   Your tracks: Van Gogh
+   Public: True
+   URL: https://open.spotify.com/playlist/1Fwp7ZQUMxpnSlrNFwTS5J
+
+============================================================

@@ -9,3 +9,4 @@ dnspython
 pyyaml
 python-dotenv
 instagrapi
+spotipy>=2.23.0
